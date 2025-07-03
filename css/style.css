@@ -16,25 +16,13 @@
     padding: 20px;
 
     /* --- Imagem de Fundo --- */
-    background-image: url('../img/hero-background-house.jpg'); 
+    background-image: url('../img/IMGfundo.png'); 
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat;
 }
 
-/* --- Sobreposição (Overlay) Escuro --- */
-.secao-hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(30, 34, 82, 0.7); 
-    
-    /* background: linear-gradient(0deg, rgba(30,34,82,0.8) 0%, rgba(47,52,111,0.6) 100%); */
-    z-index: 1; 
-}
+
 
 /* --- Posicionamento do Logo --- */
 .secao-hero__barra-topo {
@@ -589,4 +577,14 @@
   .secao-hero { min-height: auto; padding: 60px 20px; }
   .rolagem-horizontal { gap: 20px; }
   .cartao-beneficio, .cartao-imovel { min-width: 300px; }
+}
+.secao-hero__titulo .titulo-separador {
+    display: inline-block; /* Crucial para que o HR não quebre a linha */
+    vertical-align: middle; /* Ajuda a alinhar a linha com o texto */
+    width: 50px; /* Define a largura da linha */
+    height: 2px; /* Define a espessura da linha */
+    background-color: white; /* Define a cor da linha */
+    border: none; /* Remove a borda padrão do HR */
+    margin: 0 15px; /* Adiciona um espaçamento horizontal para separar do texto */
+    opacity: 0.8; /* Adiciona uma leve transparência */
 }
