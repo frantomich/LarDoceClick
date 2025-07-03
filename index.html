@@ -1,12 +1,244 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lar Doce Click</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Lar Doce Click - Encontre seu Imóvel</title>
+
+    <link rel="stylesheet" href="./css/styleguide.css">
+    
+    <link rel="stylesheet" href="./css/globals.css">
+    
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <h1>Lar Doce Click</h1>
+
+    <header class="secao-hero">
+    <div class="secao-hero__barra-topo">
+        <a href="/" class="secao-hero__logo-link">
+            <img class="secao-hero__logo" src="img/logo-light.png" alt="Logo da Imobiliária Lar Doce Click">
+        </a>
+    </div>
+
+    <div class="secao-hero__conteudo-central">
+        <h1 class="secao-hero__titulo">Encontre o Lar Perfeito para Você e Sua Família, com Total Segurança.</h1>
+        <p class="secao-hero__subtitulo">Encontre seu imóvel perfeito com confiança e profissionalismo. Alugue sem preocupações.</p>
+        <a href="#contato" class="botao botao--roxo">Fale Conosco</a>
+    </div>
+    </header>
+
+    <main>
+
+        <section id="beneficios" class="container secao-beneficios">
+            <h2 class="titulo-secao">Por que escolher a Lar Doce Click?</h2>
+
+            <div class="rolagem-horizontal">
+                <article class="cartao cartao-beneficio">
+                    <img class="cartao-beneficio__icone" src="img/icone-imoveis-verificados.svg" alt="Ícone de Imóveis Verificados">
+                    <div class="cartao-beneficio__texto-wrapper">
+                        <h3 class="cartao-beneficio__titulo">Imóveis Verificados</h3>
+                        <p class="cartao-beneficio__descricao">Todos os nossos imóveis passam por uma rigorosa vistoria para garantir sua qualidade e segurança.</p>
+                    </div>
+                </article>
+
+                <article class="cartao cartao-beneficio">
+                    <img class="cartao-beneficio__icone" src="img/icone-atendimento-personalizado.svg" alt="Ícone de Atendimento Personalizado">
+                    <div class="cartao-beneficio__texto-wrapper">
+                        <h3 class="cartao-beneficio__titulo">Atendimento Personalizado</h3>
+                        <p class="cartao-beneficio__descricao">Nossa equipe está dedicada a entender suas necessidades e encontrar o lar ideal para você.</p>
+                    </div>
+                </article>
+
+                <article class="cartao cartao-beneficio">
+                    <img class="cartao-beneficio__icone" src="img/icone-processo-descomplicado.svg" alt="Ícone de Processo Descomplicado">
+                    <div class="cartao-beneficio__texto-wrapper">
+                        <h3 class="cartao-beneficio__titulo">Processo Descomplicado</h3>
+                        <p class="cartao-beneficio__descricao">Cuidamos de toda a burocracia para que sua experiência de locação seja simples e tranquila.</p>
+                    </div>
+                </article>
+                
+                <article class="cartao cartao-beneficio">
+                    <img class="cartao-beneficio__icone" src="img/icone-assinatura-digital.svg" alt="Ícone de Assinatura Digital">
+                    <div class="cartao-beneficio__texto-wrapper">
+                        <h3 class="cartao-beneficio__titulo">Assinatura Digital</h3>
+                        <p class="cartao-beneficio__descricao">Finalize seu contrato com total segurança e conveniência. Menos papelada, mais agilidade para a sua mudança.</p>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="paginacao">
+                <div class="paginacao__indicador"></div>
+                <div class="paginacao__indicador paginacao__indicador--ativo"></div>
+                <div class="paginacao__indicador"></div>
+            </div>
+        </section>
+
+        <section id="imoveis" class="container secao-imoveis">
+            <h2 class="titulo-secao">Nossos Imóveis em Destaque:</h2>
+            
+            <div class="rolagem-horizontal">
+                <article class="cartao cartao-imovel">
+                    <img class="cartao-imovel__imagem" src="img/casa-moderna-jardim.png" alt="Casa Moderna com Jardim">
+                    <div class="cartao-imovel__conteudo">
+                        <h3 class="cartao-imovel__titulo">Casa Moderna com Jardim</h3>
+                        <div class="cartao-imovel__localizacao">
+                            <img src="img/icone-localizacao.svg" alt="Ícone de localização">
+                            <span>Rua das Flores, 123 - Bairro Central</span>
+                        </div>
+                        <ul class="cartao-imovel__caracteristicas">
+                            <li class="caracteristica"><img src="img/icone-cama.svg" alt="Ícone de Cama"> <span>3</span></li>
+                            <li class="caracteristica"><img src="img/icone-banheiro.svg" alt="Ícone de Banheiro"> <span>2</span></li>
+                            <li class="caracteristica"><img src="img/icone-garagem.svg" alt="Ícone de Garagem"> <span>2</span></li>
+                        </ul>
+                    </div>
+                </article>
+                
+                <article class="cartao cartao-imovel">
+                    <img class="cartao-imovel__imagem" src="img/casa-com-piscina.png" alt="Casa Espaçosa com Piscina">
+                    <div class="cartao-imovel__conteudo">
+                        <h3 class="cartao-imovel__titulo">Casa Espaçosa com Piscina</h3>
+                        <div class="cartao-imovel__localizacao">
+                            <img src="img/icone-localizacao.svg" alt="Ícone de localização">
+                            <span>Alameda dos Sonhos, 789 - Bairro Nobre</span>
+                        </div>
+                        <ul class="cartao-imovel__caracteristicas">
+                            <li class="caracteristica"><img src="img/icone-cama.svg" alt="Ícone de Cama"> <span>4</span></li>
+                            <li class="caracteristica"><img src="img/icone-banheiro.svg" alt="Ícone de Banheiro"> <span>4</span></li>
+                            <li class="caracteristica"><img src="img/icone-garagem.svg" alt="Ícone de Garagem"> <span>2</span></li>
+                            <li class="caracteristica"><img src="img/icone-piscina.svg" alt="Ícone de Piscina"> <span>Piscina</span></li>
+                        </ul>
+                    </div>
+                </article>
+                
+                </div>
+
+            <div class="paginacao">
+                <div class="paginacao__indicador"></div>
+                <div class="paginacao__indicador paginacao__indicador--ativo"></div>
+                <div class="paginacao__indicador"></div>
+            </div>
+        </section>
+        
+        <section id="sobre" class="container secao-sobre">
+            <div class="secao-sobre__conteudo">
+                <h2 class="titulo-secao">Sobre Nós: Seu Lar, Nossa Missão.</h2>
+                <ul class="secao-sobre__lista">
+                    <li class="secao-sobre__item-lista">
+                        Na Lar Doce Click, compreendemos que encontrar um novo lar é um passo significativo em sua vida. Nossa missão é transformar essa jornada em uma experiência tranquila, segura e bem-sucedida.
+                    </li>
+                    <li class="secao-sobre__item-lista">
+                        Com uma equipe dedicada e profissional, atuamos com confiança máxima para conectar você ao seu imóvel ideal. Seja para alugar ou comprar, nosso compromisso é oferecer um serviço de excelência, garantindo que você encontre o lar perfeito com total segurança e zero preocupações.
+                    </li>
+                    <li class="secao-sobre__item-lista">
+                        Sua busca pelo lar dos sonhos começa aqui.
+                    </li>
+                </ul>
+            </div>
+            <div class="secao-sobre__imagem-wrapper">
+                <img src="img/imagem-sobre.png" alt="Mão segurando caneta sobre um contrato com uma casa modelo ao lado.">
+            </div>
+        </section>
+
+        <section id="depoimentos" class="container secao-depoimentos">
+            <h2 class="titulo-secao">O que Dizem Aqueles que Confiam em Nós:</h2>
+            
+            <figure class="depoimento">
+                <img class="depoimento__avatar" src="img/ellipse-1.svg" alt="Avatar de Marcos F.">
+                
+                <figcaption class="depoimento__autor">Marcos .F</figcaption>
+                
+                <blockquote class="depoimento__texto">
+                    “O atendimento foi incrível! Encontrei o apartamento perfeito em menos de uma semana. Todo o processo foi super transparente e rápido. Recomendo de olhos fechados!”
+                </blockquote>
+
+                <div class="depoimento__avaliacao">
+                    <img src="img/estrela.svg" alt="Estrela de avaliação">
+                    <img src="img/estrela.svg" alt="Estrela de avaliação">
+                    <img src="img/estrela.svg" alt="Estrela de avaliação">
+                    <img src="img/estrela.svg" alt="Estrela de avaliação">
+                    <img src="img/estrela.svg" alt="Estrela de avaliação">
+                </div>
+
+                <div class="depoimento__paginacao">
+                    <div class="paginacao__indicador"></div>
+                    <div class="paginacao__indicador paginacao__indicador--ativo"></div>
+                    <div class="paginacao__indicador"></div>
+                </div>
+
+            </figure>
+        </section>
+        
+        <section id="contato" class="container secao-contato">
+            <div class="cartao cartao-contato">
+
+                <div class="cartao-contato__banner">
+                    <img src="img/imagem_formulario.png" alt="Imagem de um ambiente de sala de estar moderno">
+                </div>
+
+                <div class="cartao-contato__conteudo">
+
+                    <div class="cartao-contato__texto">
+                        <h3>Deixe-nos Ajudá-lo a Encontrar o Imóvel Perfeito.</h3>
+                        <p>
+                            Tem alguma dúvida sobre um imóvel específico, ou deseja agendar
+                            uma visita para encontrar o lar dos seus sonhos?
+                        </p>
+                        <p>
+                            Preencha o formulário abaixo e um de nossos especialistas entrará
+                            em contato em breve para te ajudar!
+                        </p>
+                        <p>
+                            Você também pode nos contatar diretamente pelos nossos canais
+                            de atendimento.
+                        </p>
+                        <p>
+                            <strong>Fale conosco hoje e dê o primeiro passo para o seu novo lar!</strong>
+                        </p>
+                    </div>
+
+                    <div class="cartao-contato__formulario">
+                        <form action="#" method="POST">
+                            
+                            <div class="formulario-linha">
+                                <div class="grupo-formulario">
+                                    <label for="nome">Nome</label>
+                                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome aqui" required>
+                                </div>
+                                <div class="grupo-formulario">
+                                    <label for="telefone">Telefone</label>
+                                    <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXX-XXXX" required>
+                                </div>
+                                <div class="grupo-formulario">
+                                    <label for="email">E-mail</label>
+                                    <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+                                </div>
+                            </div>
+
+                            <div class="grupo-formulario">
+                                <label for="mensagem">Mensagem</label>
+                                <textarea id="mensagem" name="mensagem" rows="5" placeholder="Deixe sua mensagem aqui..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="botao botao--roxo">Enviar</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    
+    <footer class="rodape">
+        <a href="/">
+            <img src="img/logo-light.png" alt="Logo da Imobiliária Lar Doce Click" class="rodape__logo">
+        </a>
+        <ul class="rodape__redes-sociais">
+            <li><a href="#" target="_blank"><img src="img/ic-baseline-facebook.svg" alt="Facebook"></a></li>
+            <li><a href="#" target="_blank"><img src="img/uil-instagram.svg" alt="Instagram"></a></li>
+            <li><a href="#" target="_blank"><img src="img/mingcute-whatsapp-line.svg" alt="WhatsApp"></a></li>
+        </ul>
+        <p class="rodape__copyright">© 2025 Lar Doce Click. Todos os direitos reservados.</p>
+    </footer>
+
 </body>
 </html>

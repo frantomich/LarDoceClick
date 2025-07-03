@@ -1,0 +1,592 @@
+/* ARQUIVO: style.css
+ * Contém os estilos de layout para cada seção da página e as media queries.
+ */
+
+
+
+/* --- Seção Hero  --- */
+.secao-hero {
+    position: relative; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; 
+    text-align: center;
+    color: var(--cor-texto-claro);
+    padding: 20px;
+
+    /* --- Imagem de Fundo --- */
+    background-image: url('../img/hero-background-house.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+/* --- Sobreposição (Overlay) Escuro --- */
+.secao-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(30, 34, 82, 0.7); 
+    
+    /* background: linear-gradient(0deg, rgba(30,34,82,0.8) 0%, rgba(47,52,111,0.6) 100%); */
+    z-index: 1; 
+}
+
+/* --- Posicionamento do Logo --- */
+.secao-hero__barra-topo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 40px;
+    z-index: 2; 
+}
+
+.secao-hero__logo {
+    width: 200px; 
+    height: auto;
+}
+
+/* --- Conteúdo Central --- */
+.secao-hero__conteudo-central {
+    position: relative; 
+    z-index: 2; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.secao-hero__titulo {
+    font-size: var(--fonte-t1);
+    font-weight: var(--peso-bold);
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); 
+    max-width: 900px;
+}
+
+.secao-hero__subtitulo {
+    font-size: var(--fonte-t3);
+    font-weight: var(--peso-regular);
+    max-width: 700px;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+
+
+
+
+/* --- Seção Benefícios  --- */
+.secao-beneficios {
+    background-color: #f7f8fa; 
+}
+
+/* --- Cartão de Benefício --- */
+.cartao-beneficio {
+    min-width: 320px;
+    height: auto; 
+    align-items: center;
+    justify-content: flex-start; 
+    gap: 25px;
+    padding: 40px 30px;
+    text-align: center;
+    border-radius: 16px; 
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cartao-beneficio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.cartao-beneficio__icone {
+    width: 70px; 
+    height: 70px;
+    margin-bottom: 5px;
+}
+
+
+.cartao-beneficio__texto-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.cartao-beneficio__titulo {
+    font-size: var(--fonte-t3);
+    font-weight: var(--peso-semibold);
+    color: var(--cor-texto-escuro);
+}
+
+.cartao-beneficio__descricao {
+    font-size: 16px; 
+    color: var(--cor-texto-suave); 
+    line-height: 1.6;
+}
+
+/* --- Paginação --- */
+
+.paginacao {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 40px; 
+}
+
+.paginacao__indicador {
+    width: 80px;
+    height: 8px;
+    background-color: #d9d9d9;
+    border-radius: 4px;
+}
+
+.paginacao__indicador--ativo {
+    background-color: var(--cor-primaria-clara);
+}
+
+
+/* --- Seção Imóveis  --- */
+.secao-imoveis {
+    background-color: #f7f8fa; 
+}
+
+
+.rolagem-horizontal {
+    padding-bottom: 40px;
+}
+
+/* --- Cartão de Imóvel --- */
+.cartao-imovel {
+    min-width: 380px; 
+    border: none; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cartao-imovel:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.cartao-imovel__imagem {
+    width: 100%;
+    height: 250px; 
+    object-fit: cover;
+}
+
+.cartao-imovel__conteudo {
+    padding: 25px; 
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+    flex-grow: 1;
+}
+
+.cartao-imovel__titulo {
+    font-size: var(--fonte-t3);
+    font-weight: var(--peso-semibold);
+    color: var(--cor-texto-escuro);
+}
+
+
+.cartao-imovel__localizacao {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: var(--fonte-detalhe);
+    color: var(--cor-texto-suave);
+}
+
+.cartao-imovel__localizacao img {
+    width: 16px;
+    height: 16px;
+}
+
+.cartao-imovel__caracteristicas {
+    display: flex;
+    gap: 25px;
+    margin-top: auto; 
+    padding-top: 15px;
+    border-top: 1px solid #f0f0f0; 
+}
+
+.caracteristica {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: var(--fonte-detalhe);
+    color: var(--cor-texto-escuro);
+}
+
+.caracteristica img {
+    width: 20px;
+    height: 20px;
+}
+
+
+.paginacao {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px; 
+}
+
+.paginacao__indicador {
+    width: 80px;
+    height: 8px;
+    background-color: #d9d9d9;
+    border-radius: 4px;
+}
+
+.paginacao__indicador--ativo {
+    background-color: var(--cor-primaria-clara);
+}
+
+
+
+/* --- Seção Sobre --- */
+
+.secao-sobre {
+    position: relative; 
+    background-color: #f7f8fa; 
+    overflow: hidden; 
+}
+
+
+.secao-sobre::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 75%; 
+    
+    
+    background-image: url('../img/forma-sobre.svg');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: bottom center;
+    z-index: 0; 
+}
+
+
+.secao-sobre .container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.secao-sobre__conteudo {
+    flex: 1; 
+    padding-right: 20px; 
+}
+
+.secao-sobre .titulo-secao {
+    text-align: left;
+    color: var(--cor-primaria); 
+}
+
+.secao-sobre__item-lista {
+    font-size: var(--fonte-corpo);
+    line-height: 1.7; 
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+}
+
+
+.secao-sobre__item-lista::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: var(--cor-primaria);
+    border-radius: 50%;
+    margin-right: 15px;
+    margin-top: 8px; 
+    flex-shrink: 0;
+}
+
+.secao-sobre__imagem-wrapper {
+    flex: 1;
+    max-width: 550px;
+    
+}
+
+
+.secao-sobre__imagem-wrapper img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* === RESPONSIVIDADE PARA A SEÇÃO SOBRE === */
+@media (max-width: 992px) {
+    /* Em telas menores, a imagem vai para baixo do texto */
+    .secao-sobre .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .secao-sobre .titulo-secao {
+        text-align: center;
+    }
+
+    .secao-sobre__conteudo {
+        padding-right: 0;
+    }
+
+    /* Esconde a forma de fundo para não poluir o layout mobile */
+    .secao-sobre::before {
+        display: none;
+    }
+}
+
+
+
+
+/* --- Seção Depoimentos  --- */
+.secao-depoimentos {
+    background-color: #f0f2f5; 
+}
+
+.depoimento {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px; 
+}
+
+.depoimento__avatar {
+    width: 98px;
+    height: 98px;
+    border-radius: 50%;
+    object-fit: cover;
+    
+    border: 4px solid white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.depoimento__autor {
+    font-size: 20px;
+    font-weight: var(--peso-bold);
+    color: var(--cor-texto-escuro);
+    
+    order: -1; 
+    margin-top: 15px;
+}
+
+.depoimento__texto {
+    font-style: normal; 
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 650px;
+    color: var(--cor-texto-suave);
+    order: 0; 
+}
+
+
+.depoimento__avaliacao {
+    display: flex;
+    gap: 8px; 
+    order: 1; 
+}
+
+.depoimento__avaliacao img {
+    width: 28px;
+    height: 28px;
+}
+
+.depoimento__paginacao {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 10px;
+    order: 2; 
+}
+
+.paginacao__indicador {
+    width: 80px;
+    height: 8px;
+    background-color: #d9d9d9; 
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.paginacao__indicador--ativo {
+    background-color: var(--cor-primaria-clara); 
+}
+
+
+
+/* --- Seção Contato --- */
+
+.secao-contato .container {
+    
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.cartao-contato {
+    max-width: 1200px;
+    margin: 0 auto;
+    
+    display: block; 
+    border-radius: 12px;
+    overflow: hidden; 
+}
+
+.cartao-contato__banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.cartao-contato__conteudo {
+    display: flex;
+    gap: 40px; 
+    padding: 40px;
+}
+
+.cartao-contato__texto {
+    flex-basis: 50%; 
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+}
+
+.cartao-contato__texto h3 {
+    font-size: 24px;
+    font-weight: var(--peso-bold);
+    color: var(--cor-primaria);
+    line-height: 1.3;
+}
+
+.cartao-contato__texto p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--cor-texto-suave);
+}
+
+.cartao-contato__formulario {
+    flex-basis: 50%; 
+}
+
+.formulario-linha {
+    display: flex;
+    gap: 15px; 
+    margin-bottom: 15px;
+}
+
+.grupo-formulario {
+    margin-bottom: 15px;
+    flex: 1; 
+}
+
+.grupo-formulario label {
+    display: block;
+    font-size: var(--fonte-detalhe);
+    font-weight: var(--peso-medio);
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.grupo-formulario input,
+.grupo-formulario textarea {
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px;
+    border: 1px solid #ccc; 
+    font-family: var(--fonte-familia);
+    font-size: 14px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.grupo-formulario input:focus,
+.grupo-formulario textarea:focus {
+    outline: none;
+    border-color: var(--cor-primaria-clara);
+    box-shadow: 0 0 0 2px rgba(67, 74, 151, 0.2);
+}
+
+.grupo-formulario textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Nova classe para o botão roxo do formulário */
+.botao--roxo {
+    width: 100%;
+    margin-top: 10px;
+    padding: 16px;
+    font-size: 18px;
+    font-weight: var(--peso-bold);
+    background: linear-gradient(90deg, #6A3093 0%, #A0449D 100%);
+}
+
+/* === RESPONSIVIDADE PARA A SEÇÃO DE CONTATO === */
+@media (max-width: 992px) {
+    .cartao-contato__conteudo {
+        flex-direction: column; 
+        gap: 30px;
+        padding: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .formulario-linha {
+        flex-direction: column; 
+        gap: 15px;
+    }
+    .cartao-contato__conteudo {
+        padding: 20px;
+    }
+}
+
+/* --- Rodapé --- */
+.rodape {
+  background: var(--gradiente-primario);
+  color: var(--cor-texto-claro);
+  padding: 40px 20px;
+  text-align: center;
+}
+.rodape__logo { width: 220px; height: auto; margin: 0 auto 30px auto; }
+.rodape__redes-sociais { display: flex; justify-content: center; gap: 20px; margin-bottom: 30px; }
+.rodape__redes-sociais img { width: 44px; height: 44px; }
+.rodape__copyright { font-size: var(--fonte-corpo); font-weight: var(--peso-medio); }
+
+
+/* === RESPONSIVIDADE === */
+
+/* Tablet (até 992px) */
+@media (max-width: 992px) {
+  .secao-sobre .container { flex-direction: column; }
+  .cartao-contato { flex-direction: column; }
+  .cartao-contato__mapa, .cartao-contato__formulario-wrapper { border-radius: 8px; }
+  .secao-sobre .titulo-secao { text-align: center; }
+}
+
+/* Mobile (até 768px) */
+@media (max-width: 768px) {
+  :root {
+      --fonte-t1: 36px;
+      --fonte-t2: 28px;
+      --fonte-t3: 18px;
+      --fonte-corpo: 16px;
+  }
+  .container { padding: 40px 15px; }
+  .secao-hero { min-height: auto; padding: 60px 20px; }
+  .rolagem-horizontal { gap: 20px; }
+  .cartao-beneficio, .cartao-imovel { min-width: 300px; }
+}

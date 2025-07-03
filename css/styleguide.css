@@ -1,0 +1,94 @@
+/* ARQUIVO: styleguide.css
+ * Contém a identidade visual do projeto: variáveis, utilitários e componentes base.
+ */
+
+/* === IMPORTAÇÕES DE FONTES === */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+/* === VARIÁVEIS GLOBAIS (ROOT) === */
+:root {
+  /* Cores */
+  --cor-fundo: #e7ecef;
+  --cor-primaria: #274c77;
+  --cor-primaria-clara: #434a97;
+  --gradiente-primario: linear-gradient(90deg, #4c58e6 0%, #2534e3 100%);
+  --cor-texto-claro: #ffffff;
+  --cor-texto-escuro: #1e1e1e;
+  --cor-texto-suave: #444242;
+  --cor-borda: #8b8c89;
+
+  /* Fontes */
+  --fonte-familia: "Inter", Helvetica, sans-serif;
+  --fonte-t1: 48px;
+  --fonte-t2: 36px;
+  --fonte-t3: 20px;
+  --fonte-corpo: 18px;
+  --fonte-detalhe: 14px;
+  
+  --peso-regular: 400;
+  --peso-medio: 500;
+  --peso-semibold: 600;
+  --peso-bold: 700;
+
+  /* Efeitos */
+  --sombra-cartao: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  --sombra-texto: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* === CLASSES DE UTILIDADE === */
+.container {
+  width: 100%;
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.titulo-secao {
+  font-size: var(--fonte-t2);
+  font-weight: var(--peso-bold);
+  color: var(--cor-primaria);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.rolagem-horizontal {
+    display: flex;
+    gap: 40px;
+    padding: 20px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+.rolagem-horizontal::-webkit-scrollbar { display: none; }
+
+
+/* === COMPONENTES BASE === */
+
+/* --- Botão --- */
+.botao {
+  display: inline-block;
+  padding: 16px 40px;
+  border-radius: 50px;
+  font-size: var(--fonte-corpo);
+  font-weight: var(--peso-semibold);
+  color: var(--cor-texto-claro);
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.2s ease;
+}
+.botao:hover { transform: scale(1.05); }
+
+.botao--primario {
+  background: var(--gradiente-primario);
+  text-shadow: var(--sombra-texto);
+}
+
+/* --- Cartão (Base) --- */
+.cartao {
+  background-color: var(--cor-texto-claro);
+  border-radius: 8px;
+  box-shadow: var(--sombra-cartao);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
