@@ -16,7 +16,7 @@
     padding: 20px;
 
     /* --- Imagem de Fundo --- */
-    background-image: url('../img/IMGfundo.png'); 
+    background-image: url('../resourses/images/IMGfundo.png'); 
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat;
@@ -256,7 +256,7 @@
     height: 75%; 
     
     
-    background-image: url('../img/forma-sobre.svg');
+    background-image: url('../resourses/images/forma-sobre.svg');
     background-repeat: no-repeat;
     background-size: cover; 
     background-position: bottom center;
