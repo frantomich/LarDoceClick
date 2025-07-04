@@ -12,7 +12,7 @@
   --cor-primaria: #274c77;
   --cor-primaria-clara: #434a97;
   --gradiente-primario: linear-gradient(90deg, #4c58e6 0%, #2534e3 100%);
-  --cor-texto-claro: #ffffff;
+  --cor-texto-claro: #e7ecef;
   --cor-texto-escuro: #1e1e1e;
   --cor-texto-suave: #444242;
   --cor-borda: #8b8c89;
@@ -31,8 +31,8 @@
   --peso-bold: 700;
 
   /* Efeitos */
-  --sombra-cartao: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  --sombra-texto: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  --sombra-cartao: 0px 2px 4px rgba(0, 0, 0, 0.5);
+  --sombra-texto: 0px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* === CLASSES DE UTILIDADE === */
