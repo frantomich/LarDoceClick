@@ -347,21 +347,57 @@
     background-color: #f0f2f5;
 }
 
-.depoimentos {
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto; /* Centraliza o carrossel */
+}
+
+.carousel-slide {
+    width: 300%; /* Ex: 3 itens = 400% */
+    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    overflow-x: auto;
-    scrollbar-width: none;
+    align-items: center;
+    transition: transform 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
+
+.depoimento-paginador {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.paginacao__indicador {
+    width: 80px;
+    height: 8px;
+    background-color: #d9d9d9; 
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
 .depoimento {
-    width: 700px;
-    text-align: center;
+    width: 33.333%; /* Ex: 4 itens = 100% / 4 = 25% (em relação ao PAI) */
+    height: 100%;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
-    align-content: center;
     justify-content: center;
+    text-align: center;
+    flex-shrink: 0;
+    box-sizing: border-box; /* Garante que o padding não afete a largura total */
+    padding: 30px;
+}
+
+.depoimento-figura {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .depoimento-avatar {
@@ -403,21 +439,6 @@
 .depoimento-avaliacao img {
     width: 28px;
     height: 28px;
-}
-
-.depoimento-paginador {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    margin-top: 30px;
-}
-
-.paginacao__indicador {
-    width: 80px;
-    height: 8px;
-    background-color: #d9d9d9; 
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
 }
 
 .paginacao__indicador--ativo {
