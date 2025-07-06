@@ -11,11 +11,11 @@
   --cor-fundo: #e7ecef;
   --cor-primaria: #274c77;
   --cor-primaria-clara: #434a97;
-  --gradiente-primario: linear-gradient(90deg, #4c58e6 0%, #2534e3 100%);
+  --gradiente-primario: linear-gradient(90deg, #4C58E6 0%, #2534E3 100%);
   --cor-texto-claro: #e7ecef;
   --cor-texto-escuro: #1e1e1e;
   --cor-texto-suave: #444242;
-  --cor-borda: #8b8c89;
+  --cor-borda: #8B8C89;
 
   /* Fontes */
   --fonte-familia: "Inter", Helvetica, sans-serif;
@@ -72,16 +72,14 @@
   font-weight: var(--peso-semibold);
   color: var(--cor-texto-claro);
   text-align: center;
+  background: var(--gradiente-primario);
   cursor: pointer;
   border: none;
+  box-shadow: var(--sombra-cartao);
   transition: transform 0.2s ease;
 }
-.botao:hover { transform: scale(1.05); }
 
-.botao--primario {
-  background: var(--gradiente-primario);
-  text-shadow: var(--sombra-texto);
-}
+.botao:hover { transform: scale(1.05); }
 
 /* --- Cartão (Base) --- */
 .cartao {
