@@ -214,15 +214,10 @@
     color: var(--cor-texto-escuro);
 }
 
-
-
 .caracteristica img {
     width: 20px;
     height: 20px;
 }
-
-
-
 
 .paginacao {
     display: flex;
