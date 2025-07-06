@@ -64,9 +64,11 @@
     text-shadow: var(--sombra-texto);
 }
 
-
-
-
+/* Botão de Chamada para Ação */
+.botao-cta {
+    width: 25%;
+    margin-top: 10px;
+}
 
 /* --- Seção Benefícios  --- */
 .secao-beneficios {
@@ -513,15 +515,10 @@
     resize: vertical;
 }
 
-/* Nova classe para o botão roxo do formulário */
-.botao--roxo {
-    width: 25%;
+/* Botão de Contato */
+.botao-contato {
+    width: 100%;
     margin-top: 10px;
-    padding: 16px;
-    font-size: 18px;
-    font-weight: var(--peso-bold);
-    background: linear-gradient(90deg, #4C58E6 0%, #2534E3 100%);
-    box-shadow: var(--sombra-cartao);
 }
 
 /* === RESPONSIVIDADE PARA A SEÇÃO DE CONTATO === */
