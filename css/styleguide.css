@@ -1,0 +1,178 @@
+/* ARQUIVO: styleguide.css
+ * Contém a identidade visual do projeto: variáveis, utilitários e componentes base.
+ */
+
+/* === IMPORTAÇÕES DE FONTES === */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+/* === VARIÁVEIS GLOBAIS (ROOT) === */
+:root {
+  /* Cores */
+  --cor-fundo: #E7ECEF;
+  --cor-fundo-cards: #F0F2F5;
+  
+  --cor-primaria-clara: #434a97;
+  --gradiente-primario: linear-gradient(90deg, #4C58E6 0%, #2534E3 100%);
+  --cor-texto-claro: #F0F2F5;
+  --cor-texto-escuro: #1e1e1e;
+  --cor-texto-suave: #444242;
+  --cor-borda: #8B8C89;
+
+  /* Fontes */
+  --fonte-familia: "Inter", Helvetica, sans-serif;
+  --fonte-t1: 48px;
+  --fonte-t2: 36px;
+  --fonte-t3: 20px;
+  --fonte-corpo: 18px;
+  --fonte-detalhe: 14px;
+  
+  --peso-regular: 400;
+  --peso-medio: 500;
+  --peso-semibold: 600;
+  --peso-bold: 700;
+
+  /* Efeitos */
+  --sombra-cartao: 0px 2px 4px rgba(0, 0, 0, 0.5);
+  --sombra-texto: 0px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* === CLASSES DE UTILIDADE === */
+.container {
+  width: 100%;
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.titulo-secao {
+  font-size: var(--fonte-t2);
+  font-weight: var(--peso-bold);
+  color: var(--cor-primaria);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.rolagem-horizontal {
+    display: flex;
+    gap: 40px;
+    padding: 20px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+.rolagem-horizontal::-webkit-scrollbar { display: none; }
+
+.rolagem-horizontal.ativo {
+    cursor: grabbing; 
+    user-select: none;
+    -webkit-user-select: none; 
+}
+
+.rolagem-horizontal img {
+    pointer-events: none;
+}
+
+
+/* === COMPONENTES BASE === */
+
+/* --- Botão --- */
+.botao {
+  display: inline-block;
+  padding: 16px 40px;
+  border-radius: 50px;
+  font-size: var(--fonte-corpo);
+  font-weight: var(--peso-semibold);
+  color: var(--cor-texto-claro);
+  text-align: center;
+  background: var(--gradiente-primario);
+  cursor: pointer;
+  border: none;
+  box-shadow: var(--sombra-cartao);
+  transition: transform 0.2s ease;
+}
+
+.botao:hover { transform: scale(1.05); }
+
+/* --- Cartão (Base) --- */
+.cartao {
+  background-color: var(--cor-texto-claro);
+  border-radius: 8px;
+  box-shadow: var(--sombra-cartao);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto; /* Centraliza o carrossel */
+}
+
+.carousel-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    gap: 30px;
+}
+
+.carousel-prev, .carousel-next {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    background: var(--gradiente-primario); 
+    border-radius: 100%; 
+    padding: 10px; 
+    cursor: pointer;
+    box-shadow: var(--sombra-cartao);
+}
+
+.carousel-slide {
+    width: 300%; /* Ex: 3 itens = 300% */
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 30px;
+    align-items: center;
+    overflow: hidden;
+    transition: transform 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    padding: 10px;
+}
+
+.carousel-indicator {
+    width: 80px;
+    height: 8px;
+    background-color: #d9d9d9; 
+    border-radius: 4px;
+    box-shadow: var(--sombra-cartao);
+}
+
+.carousel-indicator-active {
+    background-color: var(--cor-primaria-clara);
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.carousel-item {
+    width: 33.333%; /* Ex: 3 itens = 100% / 3 = 33.333% */
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px;
+    box-sizing: border-box; /* Garante que o padding não afete a largura total */
+}
