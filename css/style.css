@@ -157,7 +157,7 @@
 /* --- Cartão de Imóvel --- */
 .cartao-imovel {
     width: 395px;
-    height: 400px; 
+    height: 480px; 
     border: none; 
     border-radius: 12px; 
     box-shadow: var(--sombra-cartao); 
@@ -187,6 +187,7 @@
     font-size: var(--fonte-t3);
     font-weight: var(--peso-semibold);
     color: var(--cor-texto-escuro);
+    height: 64px;
 }
 
 
