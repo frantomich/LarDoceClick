@@ -91,7 +91,8 @@
     gap: 25px;
     padding: 40px 30px;
     text-align: center;
-    border-radius: 16px; 
+    border-radius: 16px;
+    box-sizing: border-box;
     box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05); 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -158,7 +159,8 @@
 .cartao-imovel {
     width: 395px;
     height: 480px; 
-    border: none; 
+    border: none;
+    box-sizing: border-box;
     border-radius: 12px; 
     box-shadow: var(--sombra-cartao); 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -383,6 +385,7 @@
     text-align: center;
     flex-shrink: 0;
     padding: 30px;
+    box-sizing: border-box;
 }
 
 .depoimento-figura {

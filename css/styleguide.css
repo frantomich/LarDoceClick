@@ -102,21 +102,20 @@
   flex-direction: column;
 }
 
-.carousel-container {
+.carousel-wrapper {
+    display: flex;
     width: 100%;
-    overflow: hidden;
-    margin: 0 auto; /* Centraliza o carrossel */
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    gap: 1rem;
+    margin: 0 auto;
 }
 
-.carousel-wrapper {
+.carousel-container {
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-items: center;
-    padding-left: 30px;
-    padding-right: 30px;
-    gap: 30px;
+    height: 100%;
+    overflow: hidden;
 }
 
 .carousel-prev, .carousel-next {
@@ -126,21 +125,15 @@
     align-items: center;
     justify-items: center;
     background: var(--gradiente-primario); 
-    border-radius: 100%; 
+    border-radius: 50%; 
     padding: 10px; 
     cursor: pointer;
     box-shadow: var(--sombra-cartao);
 }
 
 .carousel-slide {
-    width: 300%; /* Ex: 3 itens = 300% */
-    height: 100%;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 30px;
-    align-items: center;
-    overflow: hidden;
+    height: 100%;
     transition: transform 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
@@ -166,13 +159,12 @@
 }
 
 .carousel-item {
-    width: 33.333%; /* Ex: 3 itens = 100% / 3 = 33.333% */
     height: 100%;
+    box-sizing: border-box;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 30px;
-    padding: 15px;
-    box-sizing: border-box; /* Garante que o padding não afete a largura total */
+    /*padding: 15px;*/
+    padding: 2rem;
 }
