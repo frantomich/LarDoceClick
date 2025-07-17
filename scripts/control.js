@@ -6,9 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const allCarouselWrappers = document.querySelectorAll('.carousel-wrapper');
 
     for (const wrapper of allCarouselWrappers) {
-        // Busca o número de itens por visualização a partir do atributo 'data-items-per-view':
-        const itemsPerView = parseInt(wrapper.dataset.itemsPerView, 10) || 1;
-
+        
         // Encontra os elementos específicos dentro do wrapper atual:
         const slide = wrapper.querySelector('.carousel-slide');
         const items = wrapper.querySelectorAll('.carousel-item');
@@ -18,18 +16,52 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Define os estados iniciais de cada carrossel:
         const totalItems = items.length;
-        const totalSteps = Math.ceil(totalItems / itemsPerView);
+        let itemsPerView;
+        let totalSteps;
         let currentStep = 0;
         //let isWheeling = false;
+        let isMobile = false;
+        let isDragging = false;
+        let startX = 0;
+        let endX = 0;
 
         // Configura o carrossel:
         function setupCarousel() {
+            // Verifica se a tela é mobile
+            isMobile = window.innerWidth <= 768;
+
+            // Define quantos itens por vez com base no tamanho da tela:
+            if (isMobile) {
+                itemsPerView = 1;
+            } else {
+                // No desktop, usa o data-attribute ou o padrão 1:
+                itemsPerView = parseInt(wrapper.dataset.itemsPerView, 10) || 1;
+            }
+            
+            // Recalcula o número total de passos:
+            totalSteps = Math.ceil(totalItems / itemsPerView);
+            
+            // Garante que o passo atual não seja inválido após o redimensionamento:
+            if (currentStep >= totalSteps) {
+                currentStep = totalSteps - 1;
+            }
+
             const itemWidth = 100 / itemsPerView;
             slide.style.width = `${itemWidth * totalItems}%`;
             
             for (const item of items) {
                 item.style.width = `${100 / totalItems}%`;
             }
+
+            // Define a visibilidade dos botões de navegação:
+            if (isMobile) {
+                prevBtn.style.display = 'none';
+                nextBtn.style.display = 'none';
+            } else {
+                prevBtn.style.display = 'flex';
+                nextBtn.style.display = 'flex';
+            }
+            moveToStep(currentStep);
         }
 
         // Calcula o deslocamento. Cada passo e move o trilho pelo tamanho de uma "página" (100% do contêiner):
@@ -40,11 +72,10 @@ document.addEventListener('DOMContentLoaded', () => {
             for (const indicator of indicators) {
                 indicator.classList.remove('carousel-indicator-active');
             }
-            indicators[step].classList.add('carousel-indicator-active');
+            indicators[(step%3)].classList.add('carousel-indicator-active');
         }
 
         if (prevBtn && nextBtn) {
-            
             // Adiciona um "Event Listener" para o clique no botão "Anterior":
             prevBtn.addEventListener('click', () => {
                 if (currentStep > 0) {
@@ -108,9 +139,62 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 700); 
         }); */
 
+        slide.addEventListener('touchstart', (event) => {
+            startX = event.touches[0].clientX;
+            isDragging = true;
+            // Remove a transição suave durante o arraste para um feedback instantâneo
+            slide.style.transition = 'none';
+        });
+
+        slide.addEventListener('touchmove', (event) => {
+            if (!isDragging) return;
+            // Calcula a distância do deslize
+            const currentX = event.touches[0].clientX;
+            const diffX = currentX - startX;
+            
+            // Move o slide em tempo real com o dedo
+            const percentageToMovePerStep = 100 / totalSteps;
+            const baseTransform = -currentStep * percentageToMovePerStep;
+            // Converte a distância em pixels para porcentagem do slide
+            const dragPercentage = (diffX / slide.offsetWidth) * 100 * totalSteps;
+            
+            slide.style.transform = `translateX(${baseTransform + dragPercentage}%)`;
+        });
+
+        slide.addEventListener('touchend', () =>{
+            if (!isDragging) return;
+            isDragging = false;
+            
+            // Adiciona a transição de volta para a animação suave
+            slide.style.transition = 'transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1)';
+
+            const threshold = 50; // Mínimo de pixels para considerar um swipe válido
+            const diff = startX - endX; // endX não foi atualizado em move, usamos startX - currentX
+            
+            // Calcula a diferença final do arraste
+            const finalDiff = startX - (event.changedTouches[0].clientX || startX);
+
+            if (Math.abs(finalDiff) > threshold) {
+                if (finalDiff > 0) { // Deslize para a esquerda (próximo)
+                    if (currentStep < totalSteps - 1) {
+                        currentStep++;
+                    }
+                } else { // Deslize para a direita (anterior)
+                    if (currentStep > 0) {
+                        currentStep--;
+                    }
+                }
+            }
+            
+            // Move para o slide correto (seja o novo ou o atual, se o swipe foi inválido)
+            moveToStep(currentStep);
+        });
+
+        //Reconfigura o carrossel quando a janela é redimensionada:
+        window.addEventListener('resize', setupCarousel);
+
         // Inicializa o carrossel:
         setupCarousel();
-        moveToStep(0);
     }
 
     //Função para enviar e-mail:
