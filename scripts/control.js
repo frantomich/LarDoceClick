@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
         let isMobile = false;
         let isDragging = false;
         let startX = 0;
-        let endX = 0;
 
         // Configura o carrossel:
         function setupCarousel() {
@@ -66,8 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Calcula o deslocamento. Cada passo e move o trilho pelo tamanho de uma "página" (100% do contêiner):
         function moveToStep(step) {
-            const newTransform = -step * (itemsPerView * (100 / totalItems));
-            console.log(`Moving to step ${step}, transform: ${newTransform}%`);
+            const newTransform = -step * itemsPerView * (100 / totalItems);
             slide.style.transform = `translateX(${newTransform}%)`;
             for (const indicator of indicators) {
                 indicator.classList.remove('carousel-indicator-active');
@@ -75,29 +73,27 @@ document.addEventListener('DOMContentLoaded', () => {
             indicators[(step%3)].classList.add('carousel-indicator-active');
         }
 
-        if (prevBtn && nextBtn) {
-            // Adiciona um "Event Listener" para o clique no botão "Anterior":
-            prevBtn.addEventListener('click', () => {
-                if (currentStep > 0) {
-                    currentStep--;
-                }
-                else {
-                    currentStep = totalSteps - 1;
-                }
-                moveToStep(currentStep);
-            });
+        // Adiciona um Event Listener para o clique no botão "Anterior":
+        prevBtn.addEventListener('click', () => {
+            if (currentStep > 0) {
+                currentStep--;
+            }
+            else {
+                currentStep = totalSteps - 1;
+            }
+            moveToStep(currentStep);
+        });
 
-            // Adiciona um "Event Listener" para o clique no botão "Próximo":
-            nextBtn.addEventListener('click', () => {
-                if (currentStep < totalSteps - 1) {
-                    currentStep++;
-                }
-                else {
-                    currentStep = 0;
-                }
-                moveToStep(currentStep);
-            });
-        }
+        // Adiciona um Event Listener para o clique no botão "Próximo":
+        nextBtn.addEventListener('click', () => {
+            if (currentStep < totalSteps - 1) {
+                currentStep++;
+            }
+            else {
+                currentStep = 0;
+            }
+            moveToStep(currentStep);
+        });
 
         // Adiciona um "Event Listener" para a rolagem do mouse (scroll):
         /*carouselContainer.addEventListener('wheel', (event) => {
@@ -139,53 +135,44 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 700); 
         }); */
 
+        //Adiciona um Event Listener para a inicialização do toque:
         slide.addEventListener('touchstart', (event) => {
             startX = event.touches[0].clientX;
             isDragging = true;
-            // Remove a transição suave durante o arraste para um feedback instantâneo
-            slide.style.transition = 'none';
+            //slide.style.transition = 'none';
         });
 
+        // Adiciona um Event Listener para o movimento do toque:
         slide.addEventListener('touchmove', (event) => {
             if (!isDragging) return;
-            // Calcula a distância do deslize
+            // Calcula a distância do deslize:
             const currentX = event.touches[0].clientX;
             const diffX = currentX - startX;
-            
-            // Move o slide em tempo real com o dedo
-            const percentageToMovePerStep = 100 / totalSteps;
-            const baseTransform = -currentStep * percentageToMovePerStep;
-            // Converte a distância em pixels para porcentagem do slide
+            const baseTransform = -currentStep * (100 / totalSteps);
             const dragPercentage = (diffX / slide.offsetWidth) * 100 * totalSteps;
-            
             slide.style.transform = `translateX(${baseTransform + dragPercentage}%)`;
         });
 
-        slide.addEventListener('touchend', () =>{
+        // Adiciona um Event Listener para o final do toque:
+        slide.addEventListener('touchend', (event) =>{
             if (!isDragging) return;
             isDragging = false;
-            
-            // Adiciona a transição de volta para a animação suave
-            slide.style.transition = 'transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1)';
-
-            const threshold = 50; // Mínimo de pixels para considerar um swipe válido
-            const diff = startX - endX; // endX não foi atualizado em move, usamos startX - currentX
-            
-            // Calcula a diferença final do arraste
-            const finalDiff = startX - (event.changedTouches[0].clientX || startX);
-
+            //slide.style.transition = 'transform 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55)';
+            const threshold = 50; // Mínimo de pixels para considerar um swipe válido .          
+            // Calcula o arrasto:
+            const endX = event.changedTouches[0].clientX;
+            const finalDiff = startX - endX;
             if (Math.abs(finalDiff) > threshold) {
-                if (finalDiff > 0) { // Deslize para a esquerda (próximo)
+                if (finalDiff > 0) { // Desliza para a esquerda (próximo).
                     if (currentStep < totalSteps - 1) {
                         currentStep++;
                     }
-                } else { // Deslize para a direita (anterior)
+                } else { // Desliza para a direita (anterior).
                     if (currentStep > 0) {
                         currentStep--;
                     }
                 }
             }
-            
             // Move para o slide correto (seja o novo ou o atual, se o swipe foi inválido)
             moveToStep(currentStep);
         });
