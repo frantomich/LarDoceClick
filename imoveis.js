@@ -4,7 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     cards.forEach(card => {
         card.style.cursor = "pointer";
-        card.addEventListener("click", function () {
+        // Altera o evento de "click" para "dblclick"
+        card.addEventListener("dblclick", function () {
             window.open(link, "_blank");
         });
     });
