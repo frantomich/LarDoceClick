@@ -8,197 +8,172 @@ document.addEventListener('DOMContentLoaded', () => {
     for (const wrapper of allCarouselWrappers) {
         
         // Encontra os elementos específicos dentro do wrapper atual:
+        const container = wrapper.querySelector('.carousel-container');
         const slide = wrapper.querySelector('.carousel-slide');
         const items = wrapper.querySelectorAll('.carousel-item');
         const prevBtn = wrapper.querySelector('.carousel-prev');
         const nextBtn = wrapper.querySelector('.carousel-next');
-        const indicators = wrapper.querySelectorAll('.carousel-indicator');
+        const indicatorsContainer = wrapper.querySelector('.carousel-indicators');
 
-        // Define os estados iniciais de cada carrossel:
         const totalItems = items.length;
-        let itemsPerView;
-        let totalSteps;
-        let currentStep = 0;
-        //let isWheeling = false;
-        let isMobile = false;
+        if (totalItems === 0) continue; // Pula para o próximo se o carrossel estiver vazio
+
+        // Inicia o carrossel com o item do meio
+        let currentIndex = Math.floor(totalItems / 2);
+        
         let isDragging = false;
         let startX = 0;
-        let endX = 0;
+        let currentTranslate = 0;
+        let prevTranslate = 0;
 
-        // Configura o carrossel:
-        function setupCarousel() {
-            // Verifica se a tela é mobile
-            isMobile = window.innerWidth <= 768;
-
-            // Define quantos itens por vez com base no tamanho da tela:
-            if (isMobile) {
-                itemsPerView = 1;
-            } else {
-                // No desktop, usa o data-attribute ou o padrão 1:
-                itemsPerView = parseInt(wrapper.dataset.itemsPerView, 10) || 1;
+        // Função para criar os indicadores (bolinhas)
+        function createIndicators() {
+            if (!indicatorsContainer) return;
+            indicatorsContainer.innerHTML = ''; // Limpa indicadores antigos
+            for (let i = 0; i < totalItems; i++) {
+                const indicator = document.createElement('div');
+                indicator.classList.add('carousel-indicator');
+                indicator.addEventListener('click', () => moveToIndex(i));
+                indicatorsContainer.appendChild(indicator);
             }
-            
-            // Recalcula o número total de passos:
-            totalSteps = Math.ceil(totalItems / itemsPerView);
-            
-            // Garante que o passo atual não seja inválido após o redimensionamento:
-            if (currentStep >= totalSteps) {
-                currentStep = totalSteps - 1;
-            }
-
-            const itemWidth = 100 / itemsPerView;
-            slide.style.width = `${itemWidth * totalItems}%`;
-            
-            for (const item of items) {
-                item.style.width = `${100 / totalItems}%`;
-            }
-
-            // Define a visibilidade dos botões de navegação:
-            if (isMobile) {
-                prevBtn.style.display = 'none';
-                nextBtn.style.display = 'none';
-            } else {
-                prevBtn.style.display = 'flex';
-                nextBtn.style.display = 'flex';
-            }
-            moveToStep(currentStep);
         }
 
-        // Calcula o deslocamento. Cada passo e move o trilho pelo tamanho de uma "página" (100% do contêiner):
-        function moveToStep(step) {
-            const newTransform = -step * (itemsPerView * (100 / totalItems));
-            console.log(`Moving to step ${step}, transform: ${newTransform}%`);
-            slide.style.transform = `translateX(${newTransform}%)`;
-            for (const indicator of indicators) {
-                indicator.classList.remove('carousel-indicator-active');
-            }
-            indicators[(step%3)].classList.add('carousel-indicator-active');
+        // Função para atualizar qual indicador está ativo
+        function updateIndicators() {
+            if (!indicatorsContainer) return;
+            const indicators = indicatorsContainer.querySelectorAll('.carousel-indicator');
+            indicators.forEach((indicator, idx) => {
+                indicator.classList.toggle('carousel-indicator-active', idx === currentIndex);
+            });
         }
+
+        // Função para mover o carrossel para um índice específico
+        function moveToIndex(index) {
+            currentIndex = Math.max(0, Math.min(index, totalItems - 1));
+
+            const item = items[currentIndex];
+            if (!item) return;
+
+            const itemWidth = item.offsetWidth;
+            const containerWidth = container.offsetWidth;
+            const gap = parseFloat(getComputedStyle(slide).gap) || 0;
+            const offset = (containerWidth / 2) - (itemWidth / 2) - (currentIndex * (itemWidth + gap));
+            
+            slide.style.transform = `translateX(${offset}px)`;
+            prevTranslate = offset; // Armazena a posição final
+
+            items.forEach((item, i) => {
+                item.classList.toggle('active-item', i === currentIndex);
+            });
+
+            updateIndicators();
+        }
+
+        // --- EVENT LISTENERS ---
 
         if (prevBtn && nextBtn) {
-            // Adiciona um "Event Listener" para o clique no botão "Anterior":
             prevBtn.addEventListener('click', () => {
-                if (currentStep > 0) {
-                    currentStep--;
-                }
-                else {
-                    currentStep = totalSteps - 1;
-                }
-                moveToStep(currentStep);
+                moveToIndex(currentIndex - 1);
             });
 
-            // Adiciona um "Event Listener" para o clique no botão "Próximo":
             nextBtn.addEventListener('click', () => {
-                if (currentStep < totalSteps - 1) {
-                    currentStep++;
-                }
-                else {
-                    currentStep = 0;
-                }
-                moveToStep(currentStep);
+                moveToIndex(currentIndex + 1);
             });
         }
 
-        // Adiciona um "Event Listener" para a rolagem do mouse (scroll):
-        /*carouselContainer.addEventListener('wheel', (event) => {
-            // Prevene o comportamento padrão do scroll (rolar a página inteira):
-            event.preventDefault();
+        // LÓGICA DE ARRASTAR (MOUSE E TOUCH)
+        slide.addEventListener('mousedown', dragStart);
+        slide.addEventListener('touchstart', dragStart, { passive: true });
 
-            // Se uma animação já estiver em andamento, impede o scroll ("throttling"):
-            if (isWheeling) {
-                return;
-            }
+        slide.addEventListener('mouseup', dragEnd);
+        slide.addEventListener('mouseleave', dragEnd);
+        slide.addEventListener('touchend', dragEnd);
 
-            // Lógica para avançar ou retroceder os passos:
-            if (event.deltaY > 0) {
-                // Scroll para baixo -> Próximo slide:
-                if (currentStep < totalSteps - 1) {
-                    currentStep++;
-                }
-                else {
-                    currentStep = 0;
-                }
-            } else {
-                // Scroll para cima -> Slide anterior:
-                if (currentStep > 0) {
-                    currentStep--;
-                }
-                else {
-                    currentStep = totalSteps - 1;
-                }
-            }
-            
-            // Realiza o passo e ativa o "throttling":
-            moveToStep(currentStep);
-            isWheeling = true;
+        slide.addEventListener('mousemove', drag);
+        slide.addEventListener('touchmove', drag, { passive: true });
 
-            // Reseta o "throttling" após a animação terminar:
-            // O tempo (700ms) deve ser igual à duração da transição no CSS.
-            setTimeout(() => {
-                isWheeling = false;
-            }, 700); 
-        }); */
-
-        slide.addEventListener('touchstart', (event) => {
-            startX = event.touches[0].clientX;
+        function dragStart(event) {
             isDragging = true;
-            // Remove a transição suave durante o arraste para um feedback instantâneo
-            slide.style.transition = 'none';
-        });
+            startX = event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
+            slide.style.transition = 'none'; // Remove transição durante o arrastar
+            slide.style.cursor = 'grabbing';
+        }
 
-        slide.addEventListener('touchmove', (event) => {
+        function drag(event) {
             if (!isDragging) return;
-            // Calcula a distância do deslize
-            const currentX = event.touches[0].clientX;
-            const diffX = currentX - startX;
-            
-            // Move o slide em tempo real com o dedo
-            const percentageToMovePerStep = 100 / totalSteps;
-            const baseTransform = -currentStep * percentageToMovePerStep;
-            // Converte a distância em pixels para porcentagem do slide
-            const dragPercentage = (diffX / slide.offsetWidth) * 100 * totalSteps;
-            
-            slide.style.transform = `translateX(${baseTransform + dragPercentage}%)`;
-        });
+            const currentPosition = event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
+            currentTranslate = prevTranslate + currentPosition - startX;
+            slide.style.transform = `translateX(${currentTranslate}px)`;
+        }
 
-        slide.addEventListener('touchend', () =>{
+        function dragEnd(event) {
             if (!isDragging) return;
             isDragging = false;
-            
-            // Adiciona a transição de volta para a animação suave
             slide.style.transition = 'transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1)';
+            slide.style.cursor = 'grab';
 
-            const threshold = 50; // Mínimo de pixels para considerar um swipe válido
-            const diff = startX - endX; // endX não foi atualizado em move, usamos startX - currentX
-            
-            // Calcula a diferença final do arraste
-            const finalDiff = startX - (event.changedTouches[0].clientX || startX);
+            const movedBy = currentTranslate - prevTranslate;
+            const threshold = 50; // Distância mínima para mudar de slide
 
-            if (Math.abs(finalDiff) > threshold) {
-                if (finalDiff > 0) { // Deslize para a esquerda (próximo)
-                    if (currentStep < totalSteps - 1) {
-                        currentStep++;
-                    }
-                } else { // Deslize para a direita (anterior)
-                    if (currentStep > 0) {
-                        currentStep--;
-                    }
-                }
+            if (movedBy < -threshold && currentIndex < totalItems - 1) {
+                moveToIndex(currentIndex + 1);
+            } else if (movedBy > threshold && currentIndex > 0) {
+                moveToIndex(currentIndex - 1);
+            } else {
+                moveToIndex(currentIndex); // Volta para o slide atual se não arrastar o suficiente
             }
-            
-            // Move para o slide correto (seja o novo ou o atual, se o swipe foi inválido)
-            moveToStep(currentStep);
+        }
+
+        // Previne o comportamento padrão de arrastar imagem no navegador
+        slide.addEventListener('dragstart', (e) => e.preventDefault());
+
+        // Configuração inicial e reajuste no redimensionamento da janela
+        function setupCarousel() {
+            createIndicators();
+            // Move para o índice atual (que pode ser o do meio na primeira carga)
+            moveToIndex(currentIndex);
+        }
+
+        window.addEventListener('resize', setupCarousel);
+        setupCarousel(); // Primeira execução
+
+        // --- LÓGICA PARA PREVENIR CLIQUE ACIDENTAL AO ARRASTAR ---
+        const clickableLinks = wrapper.querySelectorAll('a');
+        clickableLinks.forEach(link => {
+            let clickTimer = null;
+            let isClickValid = false;
+
+            link.addEventListener('click', (e) => {
+                // Se o clique não for válido (porque foi um arraste), previne a ação.
+                if (!isClickValid) {
+                    e.preventDefault();
+                }
+            });
+
+            link.addEventListener('mousedown', () => {
+                // Quando o mouse é pressionado, consideramos o clique potencialmente válido.
+                isClickValid = true;
+            });
+
+            link.addEventListener('mousemove', () => {
+                // Se o mouse se mover, significa que é um arraste, então o clique não é válido.
+                isClickValid = false;
+            });
+
+            // Adiciona o listener de duplo clique para abrir o link
+            link.addEventListener('dblclick', (e) => {
+                e.preventDefault(); // Previne qualquer comportamento padrão residual
+                const url = link.href;
+                if (url) {
+                    // Abre o link em uma nova aba
+                    window.open(url, link.target || '_blank');
+                }
+            });
         });
 
-        //Reconfigura o carrossel quando a janela é redimensionada:
-        window.addEventListener('resize', setupCarousel);
+    } // Fim do loop 'for (const wrapper of allCarouselWrappers)'
 
-        // Inicializa o carrossel:
-        setupCarousel();
-    }
-
-    //Função para enviar e-mail:
-
+    // --- LÓGICA DO FORMULÁRIO DE CONTATO (permanece a mesma) ---
     emailjs.init('nRFCdVlUADZocJb5U');
 
     const contactForm = document.getElementById('contact-form');
@@ -211,7 +186,6 @@ document.addEventListener('DOMContentLoaded', () => {
             submitButton.textContent = 'Enviando...';
             submitButton.disabled = true;
 
-            
             emailjs.sendForm('service_fu1jrxm', 'template_vn7yr0l', this).then(() => {
                 alert('Mensagem enviada com sucesso!');
                 submitButton.textContent = originalButtonText;

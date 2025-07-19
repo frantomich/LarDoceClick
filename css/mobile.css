@@ -1,18 +1,155 @@
-/*Folha de estilos para dispositivos móveis*/
+/* ARQUIVO: mobile.css
+ * Contém todos os estilos responsivos para tablets e celulares.
+ */
 
+/* === TABLET (até 992px) === */
+@media (max-width: 992px) {
+    /* --- Seção Sobre --- */
+    .secao-sobre .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .secao-sobre .titulo-secao {
+        text-align: center;
+    }
+
+    .secao-sobre-conteudo {
+        flex-direction: column;
+        padding-right: 0;
+    }
+
+    .secao-sobre-imagem-wrapper {
+        margin: 30px auto 0 auto;
+    }
+
+    /* --- Seção Contato --- */
+    .cartao-contato__conteudo {
+        flex-direction: column; 
+        gap: 30px;
+        padding: 30px;
+    }
+}
+
+
+/* === MOBILE (até 768px) === */
 @media (max-width: 768px) {
-    
+    /* --- Layout Geral --- */
+    .container { 
+        padding: 40px 15px; 
+    }
+
+    .titulo-secao {
+        font-size: 28px;
+    }
+
+    /* --- Seção Hero --- */
+    .secao-hero { 
+        min-height: auto; 
+        padding: 80px 20px 60px 20px; 
+    }
+    .secao-hero__barra-topo { 
+        padding: 20px; 
+    }
+    .secao-hero__conteudo-central { 
+        margin-top: 80px; 
+    } 
+
+    /* --- Carrossel --- */
     .carousel-prev, .carousel-next {
-        display: none;
+        display: none; /* Esconde as setas laterais */
     }
 
     .carousel-wrapper {
-        gap: 0; /* Remove o espaço, já que os botões sumiram */
-        padding: 0 1rem; /* Adiciona um pequeno padding para não colar nas bordas */
+        gap: 0; 
+        padding: 0 1rem; 
     }
 
     .carousel-container {
-        height: 350px;
+        height: auto; 
     }
 
+    .cartao-beneficio {
+        width: 280px; 
+        height: auto;
+        padding: 30px 20px;
+    }
+
+    .cartao-imovel {
+        width: 300px; /* Diminui o tamanho do card de imóvel */
+        height: auto;
+    }
+
+    /* --- Seção Sobre --- */
+    .secao-sobre {
+        padding: 40px 5%;
+    }
+
+    .secao-sobre h2, .secao-sobre-lista {
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .secao-sobre-lista {
+        list-style-position: inside;
+    }
+
+    .secao-sobre-imagem-wrapper {
+        position: static;
+        opacity: 0.6;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .secao-sobre-curvas {
+        display: none; /* Esconde as curvas decorativas */
+    }
+
+    /* --- Seção Contato --- */
+    .formulario-linha {
+        flex-direction: column; 
+        gap: 15px;
+        margin-bottom: 0;
+    }
+    .cartao-contato__conteudo {
+        padding: 20px;
+    }
+
+    /* --- Seção Depoimentos --- */
+    .depoimento {
+        padding: 20px 15px; /* Adiciona padding lateral para o texto não cortar */
+    }
+
+    .depoimento-texto {
+        font-size: 16px; /* Reduz um pouco a fonte para melhor encaixe */
+        line-height: 1.6;
+    }
+}
+
+
+/* === TELAS MUITO PEQUENAS (até 480px) === */
+@media (max-width: 480px) {
+    /* --- Seção Hero --- */
+    .secao-hero__conteudo-central { 
+        margin-top: 60px; 
+        padding: 0 10px;
+    }
+    .secao-hero__barra-topo { 
+        padding: 15px; 
+    }
+    .secao-hero__titulo {
+        font-size: clamp(24px, 6vw, 32px); 
+    }
+    .secao-hero__subtitulo {
+        font-size: clamp(14px, 3.5vw, 18px); 
+    }
+
+    /* --- Rodapé --- */
+    .rodape__logo {
+        width: 180px;
+    }
+    .rodape__redes-sociais img {
+        width: 38px;
+        height: 38px;
+    }
 }
