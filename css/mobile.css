@@ -1,0 +1,18 @@
+/*Folha de estilos para dispositivos móveis*/
+
+@media (max-width: 768px) {
+    
+    .carousel-prev, .carousel-next {
+        display: none;
+    }
+
+    .carousel-wrapper {
+        gap: 0; /* Remove o espaço, já que os botões sumiram */
+        padding: 0 1rem; /* Adiciona um pequeno padding para não colar nas bordas */
+    }
+
+    .carousel-container {
+        height: 350px;
+    }
+
+}

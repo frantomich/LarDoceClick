@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="./css/styleguide.css">
     <link rel="stylesheet" href="./css/globals.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/mobile.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="scripts/control.js" defer></script>
+    <script src="imoveis.js"></script>
 </head>
 
 <body>
@@ -33,47 +37,124 @@
 
 
         <section id="beneficios" class="container secao-beneficios">
+
             <h2 class="titulo-secao">Por que escolher a Lar Doce Click?</h2>
 
-            <div class="rolagem-horizontal">
-                <article class="cartao cartao-beneficio">
-                    <img class="cartao-beneficio__icone" src="assets/images/imoveis_verificados.png" alt="Ícone de Imóveis Verificados">
-                    <div class="cartao-beneficio__texto-wrapper">
-                        <h3 class="cartao-beneficio__titulo">Imóveis Verificados</h3>
-                        <p class="cartao-beneficio__descricao">Todos os nossos imóveis passam por uma rigorosa vistoria para garantir sua qualidade e segurança.</p>
-                    </div>
-                </article>
+            <div class="carousel-wrapper" data-items-per-view="3">
+                <div class="carousel-prev" id="carousel-prev" name="carousel-prev">
+                    <img src="assets/icons/material-symbols-back.svg" alt="Seta para a esquerda">
+                </div>
+                <div class="carousel-container">
+                    <div class="carousel-slide">
 
-                <article class="cartao cartao-beneficio">
-                    <img class="cartao-beneficio__icone" src="assets/images/atendimento.png" alt="Ícone de Atendimento Personalizado">
-                    <div class="cartao-beneficio__texto-wrapper">
-                        <h3 class="cartao-beneficio__titulo">Atendimento Personalizado</h3>
-                        <p class="cartao-beneficio__descricao">Nossa equipe está dedicada a entender suas necessidades e encontrar o lar ideal para você.</p>
-                    </div>
-                </article>
+                        <!--1º Benefício-->
+                        <div class="carousel-item">
+                            <article class="cartao cartao-beneficio">
+                                <img class="cartao-beneficio__icone" src="assets/icons/fluent-color--certificate-32.svg" alt="Ícone de Imóveis Verificados">
+                                <div class="cartao-beneficio__texto-wrapper">
+                                    <h3 class="cartao-beneficio__titulo">Imóveis Verificados</h3>
+                                    <p class="cartao-beneficio__descricao">Todos os nossos imóveis passam por uma rigorosa vistoria para garantir sua qualidade e segurança.</p>
+                                </div>
+                            </article>
+                        </div>
+                        
+                        <!--2º Benefício-->
+                        <div class="carousel-item">
+                            <article class="cartao cartao-beneficio">
+                                <img class="cartao-beneficio__icone" src="assets/images/atendimento.png" alt="Ícone de Atendimento Personalizado">
+                                <div class="cartao-beneficio__texto-wrapper">
+                                    <h3 class="cartao-beneficio__titulo">Atendimento Personalizado</h3>
+                                    <p class="cartao-beneficio__descricao">Nossa equipe está dedicada a entender suas necessidades e encontrar o lar ideal para você.</p>
+                                </div>
+                            </article>
+                        </div>
 
-                <article class="cartao cartao-beneficio">
-                    <img class="cartao-beneficio__icone" src="assets/images/processo_descomplicado.png" alt="Ícone de Processo Descomplicado">
-                    <div class="cartao-beneficio__texto-wrapper">
-                        <h3 class="cartao-beneficio__titulo">Processo Descomplicado</h3>
-                        <p class="cartao-beneficio__descricao">Cuidamos de toda a burocracia para que sua experiência de locação seja simples e tranquila.</p>
-                    </div>
-                </article>
-                
-                <article class="cartao cartao-beneficio">
-                    <img class="cartao-beneficio__icone" src="assets/images/assinatura_digital.png" alt="Ícone de Assinatura Digital">
-                    <div class="cartao-beneficio__texto-wrapper">
-                        <h3 class="cartao-beneficio__titulo">Assinatura Digital</h3>
-                        <p class="cartao-beneficio__descricao">Finalize seu contrato com total segurança e conveniência. Menos papelada, mais agilidade para a sua mudança.</p>
-                    </div>
-                </article>
+                        <!--3º Benefício-->
+                        <div class="carousel-item">
+                            <article class="cartao cartao-beneficio">
+                                <img class="cartao-beneficio__icone" src="assets/images/processo_descomplicado.png" alt="Ícone de Processo Descomplicado">
+                                <div class="cartao-beneficio__texto-wrapper">
+                                    <h3 class="cartao-beneficio__titulo">Processo Descomplicado</h3>
+                                    <p class="cartao-beneficio__descricao">Cuidamos de toda a burocracia para que sua experiência de locação seja simples e tranquila.</p>
+                                </div>
+                            </article>
+                        </div>
 
-            </div>
+                        <!--4º Benefício-->
+                        <div class="carousel-item">
+                            <article class="cartao cartao-beneficio">
+                                <img class="cartao-beneficio__icone" src="assets/icons/fluent-color--phone-laptop-32.svg" alt="Ícone de Assinatura Digital">
+                                <div class="cartao-beneficio__texto-wrapper">
+                                    <h3 class="cartao-beneficio__titulo">Assinatura Digital</h3>
+                                    <p class="cartao-beneficio__descricao">Finalize seu contrato com total segurança e conveniência. Menos papelada, mais agilidade para a sua mudança.</p>
+                                </div>
+                            </article>
+                        </div>
 
-            <div class="paginacao">
-                <div class="paginacao__indicador"></div>
-                <div class="paginacao__indicador paginacao__indicador--ativo"></div>
-                <div class="paginacao__indicador"></div>
+                        <!--5º Benefício-->
+                        <div class="carousel-item">
+                            <article class="cartao cartao-beneficio">
+                                <img class="cartao-beneficio__icone" src="assets/images/atendimento.png" alt="Ícone de Atendimento Personalizado">
+                                <div class="cartao-beneficio__texto-wrapper">
+                                    <h3 class="cartao-beneficio__titulo">Atendimento Personalizado</h3>
+                                    <p class="cartao-beneficio__descricao">Nossa equipe está dedicada a entender suas necessidades e encontrar o lar ideal para você.</p>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!--6º Benefício-->
+                        <div class="carousel-item">
+                            <article class="cartao cartao-beneficio">
+                                <img class="cartao-beneficio__icone" src="assets/images/processo_descomplicado.png" alt="Ícone de Processo Descomplicado">
+                                <div class="cartao-beneficio__texto-wrapper">
+                                    <h3 class="cartao-beneficio__titulo">Processo Descomplicado</h3>
+                                    <p class="cartao-beneficio__descricao">Cuidamos de toda a burocracia para que sua experiência de locação seja simples e tranquila.</p>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!--7º Benefício-->
+                        <div class="carousel-item">
+                            <article class="cartao cartao-beneficio">
+                                <img class="cartao-beneficio__icone" src="assets/icons/fluent-color--certificate-32.svg" alt="Ícone de Imóveis Verificados">
+                                <div class="cartao-beneficio__texto-wrapper">
+                                    <h3 class="cartao-beneficio__titulo">Imóveis Verificados</h3>
+                                    <p class="cartao-beneficio__descricao">Todos os nossos imóveis passam por uma rigorosa vistoria para garantir sua qualidade e segurança.</p>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!--8º Benefício-->
+                        <div class="carousel-item">
+                            <article class="cartao cartao-beneficio">
+                                <img class="cartao-beneficio__icone" src="assets/images/atendimento.png" alt="Ícone de Atendimento Personalizado">
+                                <div class="cartao-beneficio__texto-wrapper">
+                                    <h3 class="cartao-beneficio__titulo">Atendimento Personalizado</h3>
+                                    <p class="cartao-beneficio__descricao">Nossa equipe está dedicada a entender suas necessidades e encontrar o lar ideal para você.</p>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!--9º Benefício-->
+                        <div class="carousel-item">
+                            <article class="cartao cartao-beneficio">
+                                <img class="cartao-beneficio__icone" src="assets/images/processo_descomplicado.png" alt="Ícone de Processo Descomplicado">
+                                <div class="cartao-beneficio__texto-wrapper">
+                                    <h3 class="cartao-beneficio__titulo">Processo Descomplicado</h3>
+                                    <p class="cartao-beneficio__descricao">Cuidamos de toda a burocracia para que sua experiência de locação seja simples e tranquila.</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="carousel-indicators">
+                        <div class="carousel-indicator"></div>
+                        <div class="carousel-indicator"></div>
+                        <div class="carousel-indicator"></div>
+                    </div>
+                </div>
+                <div class="carousel-next" id="carousel-next" name="carousel-next">
+                    <img src="assets/icons/material-symbols-next.svg" alt="Seta para a direita">
+                </div>
             </div>
         </section>
 
@@ -82,49 +163,201 @@
 
 
         <section id="imoveis" class="container secao-imoveis">
-            <h2 class="titulo-secao">Nossos Imóveis em Destaque:</h2>
-            
-            <div class="rolagem-horizontal">
-                <article class="cartao cartao-imovel">
-                    <img class="cartao-imovel__imagem" src="assets/images/casa_jardim.png" alt="Casa Moderna com Jardim">
-                    <div class="cartao-imovel__conteudo">
-                        <h3 class="cartao-imovel__titulo">Casa Moderna com Jardim</h3>
-                        <div class="cartao-imovel__localizacao">
-                            <img src="assets/images/localizacao.png" alt="Ícone de localização">
-                            <span>Rua das Flores, 123 - Bairro Central</span>
-                        </div>
-                        <ul class="cartao-imovel__caracteristicas">
-                            <li class="caracteristica"><img src="assets/images/icone_cama.png" alt="Ícone de Cama"> <span>3</span></li>
-                            <li class="caracteristica"><img src="assets/images/icone_banheira.png" alt="Ícone de Banheiro"> <span>2</span></li>
-                            <li class="caracteristica"><img src="assets/images/icone_carro.png" alt="Ícone de Garagem"> <span>2</span></li>
-                        </ul>
-                    </div>
-                </article>
-                
-                <article class="cartao cartao-imovel">
-                    <img class="cartao-imovel__imagem" src="assets/images/casa_piscina.png" alt="Casa Espaçosa com Piscina">
-                    <div class="cartao-imovel__conteudo">
-                        <h3 class="cartao-imovel__titulo">Casa Espaçosa com Piscina</h3>
-                        <div class="cartao-imovel__localizacao">
-                            <img src="assets/images/localizacao.png" alt="Ícone de localização">
-                            <span>Alameda dos Sonhos, 789 - Bairro Nobre</span>
-                        </div>
-                        <ul class="cartao-imovel__caracteristicas">
-                            <li class="caracteristica"><img src="assets/images/icone_cama.png" alt="Ícone de Cama"> <span>4</span></li>
-                            <li class="caracteristica"><img src="assets/images/icone_banheira.png" alt="Ícone de Banheiro"> <span>4</span></li>
-                            <li class="caracteristica"><img src="assets/images/icone_carro.png" alt="Ícone de Garagem"> <span>2</span></li>
-                            <li class="caracteristica"><img src="assets/images/Icone_piscina.png" alt="Ícone de Piscina"> <span>Piscina</span></li>
-                        </ul>
-                    </div>
-                </article>
-                
-                </div>
 
-            <div class="paginacao">
-                <div class="paginacao__indicador"></div>
-                <div class="paginacao__indicador paginacao__indicador--ativo"></div>
-                <div class="paginacao__indicador"></div>
+            <h2 class="titulo-secao">Nossos Imóveis em Destaque:</h2>
+
+            <div class="carousel-wrapper" data-items-per-view="3">
+                <div class="carousel-prev" id="carousel-prev" name="carousel-prev">
+                    <img src="assets/icons/material-symbols-back.svg" alt="Seta para a esquerda">
+                </div>
+                <div class="carousel-container">
+                    <div class="carousel-slide">
+
+                        <!--1º Imóvel-->
+                        <div class="carousel-item">
+                            <article class="cartao cartao-imovel">
+                                <img class="cartao-imovel__imagem" src="assets/images/casa_jardim.png" alt="Casa Moderna com Jardim">
+                                <div class="cartao-imovel__conteudo">
+                                    <h3 class="cartao-imovel__titulo">Casa Moderna com Jardim</h3>
+                                    <div class="cartao-imovel__localizacao">
+                                        <img src="assets/images/localizacao.png" alt="Ícone de localização">
+                                        <span>Rua das Flores, 123 - Bairro Central</span>
+                                    </div>
+                                    <ul class="cartao-imovel__caracteristicas">
+                                        <li class="caracteristica"><img src="assets/images/icone_cama.png" alt="Ícone de Cama"> <span>3</span></li>
+                                        <li class="caracteristica"><img src="assets/images/icone_banheira.png" alt="Ícone de Banheiro"> <span>2</span></li>
+                                        <li class="caracteristica"><img src="assets/images/icone_carro.png" alt="Ícone de Garagem"> <span>2</span></li>
+                                    </ul>
+                                </div>
+                            </article>
+                        </div>
+                        
+                        <!--2º Imóvel-->
+                        <div class="carousel-item">
+                            <article class="cartao cartao-imovel">
+                                <img class="cartao-imovel__imagem" src="assets/images/casa_piscina.png" alt="Casa Espaçosa com Piscina">
+                                <div class="cartao-imovel__conteudo">
+                                    <h3 class="cartao-imovel__titulo">Casa Espaçosa com Piscina</h3>
+                                    <div class="cartao-imovel__localizacao">
+                                        <img src="assets/images/localizacao.png" alt="Ícone de localização">
+                                        <span>Alameda dos Sonhos, 789 - Bairro Nobre</span>
+                                    </div>
+                                    <ul class="cartao-imovel__caracteristicas">
+                                        <li class="caracteristica"><img src="assets/images/icone_cama.png" alt="Ícone de Cama"> <span>4</span></li>
+                                        <li class="caracteristica"><img src="assets/images/icone_banheira.png" alt="Ícone de Banheiro"> <span>4</span></li>
+                                        <li class="caracteristica"><img src="assets/images/icone_carro.png" alt="Ícone de Garagem"> <span>2</span></li>
+                                        <li class="caracteristica"><img src="assets/images/Icone_piscina.png" alt="Ícone de Piscina"> <span>Piscina</span></li>
+                                    </ul>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!--3º Imóvel-->
+                        <div class="carousel-item">                        
+                            <article class="cartao cartao-imovel">
+                                <img class="cartao-imovel__imagem" src="assets/images/casa_subúrbio.jpg" alt="Casa Subúrbio">
+                                <div class="cartao-imovel__conteudo">
+                                    <h3 class="cartao-imovel__titulo">Casa Subúrbio</h3>
+                                    <div class="cartao-imovel__localizacao">
+                                        <img src="assets/images/localizacao.png" alt="Ícone de localização">
+                                        <span>Avenida Brasilândia, 897 - Luzilândia</span>
+                                    </div>
+                                    <ul class="cartao-imovel__caracteristicas">
+                                        <li class="caracteristica"><img src="assets/images/icone_cama.png" alt="Ícone de Cama"> <span>3</span></li>
+                                        <li class="caracteristica"><img src="assets/images/icone_banheira.png" alt="Ícone de Banheiro"> <span>2</span></li>
+                                        <li class="caracteristica"><img src="assets/images/icone_carro.png" alt="Ícone de Garagem"> <span>1</span></li>
+                                    </ul>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!--4º Imóvel-->
+                        <div class="carousel-item">
+                            <article class="cartao cartao-imovel">
+                                <img class="cartao-imovel__imagem" src="assets/images/casa_lago.jpg" alt="Casa no Lago">
+                                <div class="cartao-imovel__conteudo">
+                                    <h3 class="cartao-imovel__titulo">Casa no Lago</h3>
+                                    <div class="cartao-imovel__localizacao">
+                                        <img src="assets/images/localizacao.png" alt="Ícone de localização">
+                                        <span>Rua Alagoas, 102 - Beira Rio</span>
+                                    </div>
+                                    <ul class="cartao-imovel__caracteristicas">
+                                        <li class="caracteristica"><img src="assets/images/icone_cama.png" alt="Ícone de Cama"> <span>4</span></li>
+                                        <li class="caracteristica"><img src="assets/images/icone_banheira.png" alt="Ícone de Banheiro"> <span>3</span></li>
+                                        <li class="caracteristica"><img src="assets/images/icone_carro.png" alt="Ícone de Garagem"> <span>3</span></li>
+                                    </ul>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!--5º Imóvel-->
+                        <div class="carousel-item">
+                            <article class="cartao cartao-imovel">
+                                <img class="cartao-imovel__imagem" src="assets/images/casa_dois_andares.jpg" alt="Casa dois Andares">
+                                <div class="cartao-imovel__conteudo">
+                                    <h3 class="cartao-imovel__titulo">Casa dois Andares</h3>
+                                    <div class="cartao-imovel__localizacao">
+                                        <img src="assets/images/localizacao.png" alt="Ícone de localização">
+                                        <span>Rua Pinheiros, 2023 - Centro</span>
+                                    </div>
+                                    <ul class="cartao-imovel__caracteristicas">
+                                        <li class="caracteristica"><img src="assets/images/icone_cama.png" alt="Ícone de Cama"> <span>6</span></li>
+                                        <li class="caracteristica"><img src="assets/images/icone_banheira.png" alt="Ícone de Banheiro"> <span>4</span></li>
+                                        <li class="caracteristica"><img src="assets/images/icone_carro.png" alt="Ícone de Garagem"> <span>2</span></li>
+                                    </ul>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!--6º Imóvel-->
+                        <div class="carousel-item">                        
+                            <article class="cartao cartao-imovel">
+                                <img class="cartao-imovel__imagem" src="assets/images/mansão.jpg" alt="Casa Arborizada">
+                                <div class="cartao-imovel__conteudo">
+                                    <h3 class="cartao-imovel__titulo">Casa Arborizada com Piscina</h3>
+                                    <div class="cartao-imovel__localizacao">
+                                        <img src="assets/images/localizacao.png" alt="Ícone de localização">
+                                        <span>Avenida Tiradentes, 495 - Ribeiro Sobrinho</span>
+                                    </div>
+                                    <ul class="cartao-imovel__caracteristicas">
+                                        <li class="caracteristica"><img src="assets/images/icone_cama.png" alt="Ícone de Cama"> <span>5</span></li>
+                                        <li class="caracteristica"><img src="assets/images/icone_banheira.png" alt="Ícone de Banheiro"> <span>3</span></li>
+                                        <li class="caracteristica"><img src="assets/images/icone_carro.png" alt="Ícone de Garagem"> <span>3</span></li>
+                                        <li class="caracteristica"><img src="assets/images/Icone_piscina.png" alt="Ícone de Piscina"> <span>Piscina</span></li>
+                                    </ul>
+                                </div>
+                            </article>
+                        </div>
+                        
+                        <!--7º Imóvel-->
+                        <div class="carousel-item">
+                            <article class="cartao cartao-imovel">
+                                <img class="cartao-imovel__imagem" src="assets/images/casa_duplex_piscina.jpg" alt="Casa Duplex com Piscina">
+                                <div class="cartao-imovel__conteudo">
+                                    <h3 class="cartao-imovel__titulo">Casa Duplex com Piscina</h3>
+                                    <div class="cartao-imovel__localizacao">
+                                        <img src="assets/images/localizacao.png" alt="Ícone de localização">
+                                        <span>Jardim Europa, 995 - Jardins</span>
+                                    </div>
+                                    <ul class="cartao-imovel__caracteristicas">
+                                        <li class="caracteristica"><img src="assets/images/icone_cama.png" alt="Ícone de Cama"> <span>8</span></li>
+                                        <li class="caracteristica"><img src="assets/images/icone_banheira.png" alt="Ícone de Banheiro"> <span>6</span></li>
+                                        <li class="caracteristica"><img src="assets/images/icone_carro.png" alt="Ícone de Garagem"> <span>4</span></li>
+                                        <li class="caracteristica"><img src="assets/images/Icone_piscina.png" alt="Ícone de Piscina"> <span>Piscina</span></li>
+                                    </ul>
+                                </div>
+                            </article>
+                        </div>
+                        
+                        <!--8º Imóvel-->
+                        <div class="carousel-item">
+                            <article class="cartao cartao-imovel">
+                                <img class="cartao-imovel__imagem" src="assets/images/casa_jardim.jpg" alt="Casa Arborizada">
+                                <div class="cartao-imovel__conteudo">
+                                    <h3 class="cartao-imovel__titulo">Mansão</h3>
+                                    <div class="cartao-imovel__localizacao">
+                                        <img src="assets/images/localizacao.png" alt="Ícone de localização">
+                                        <span>Rua Pinheiros, 2023 - Centro</span>
+                                    </div>
+                                    <ul class="cartao-imovel__caracteristicas">
+                                        <li class="caracteristica"><img src="assets/images/icone_cama.png" alt="Ícone de Cama"> <span>11</span></li>
+                                        <li class="caracteristica"><img src="assets/images/icone_banheira.png" alt="Ícone de Banheiro"> <span>9</span></li>
+                                        <li class="caracteristica"><img src="assets/images/icone_carro.png" alt="Ícone de Garagem"> <span>5</span></li>
+                                    </ul>
+                                </div>
+                            </article>
+                        </div>
+                        
+                        <!--9º Imóvel-->
+                        <div class="carousel-item">
+                            <article class="cartao cartao-imovel">
+                                <img class="cartao-imovel__imagem" src="assets/images/casa_beira_mar.jpg" alt="Casa Beira Mar">
+                                <div class="cartao-imovel__conteudo">
+                                    <h3 class="cartao-imovel__titulo">Casa Beira Mar</h3>
+                                    <div class="cartao-imovel__localizacao">
+                                        <img src="assets/images/localizacao.png" alt="Ícone de localização">
+                                        <span>Rua Cantinho Mágico, 1144 - Ingleses do Rio Vermelho</span>
+                                    </div>
+                                    <ul class="cartao-imovel__caracteristicas">
+                                        <li class="caracteristica"><img src="assets/images/icone_cama.png" alt="Ícone de Cama"> <span>6</span></li>
+                                        <li class="caracteristica"><img src="assets/images/icone_banheira.png" alt="Ícone de Banheiro"> <span>4</span></li>
+                                        <li class="caracteristica"><img src="assets/images/icone_carro.png" alt="Ícone de Garagem"> <span>1</span></li>
+                                    </ul>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="carousel-indicators">
+                        <div class="carousel-indicator"></div>
+                        <div class="carousel-indicator"></div>
+                        <div class="carousel-indicator"></div>
+                    </div>
+                </div>
+                <div class="carousel-next" id="carousel-next" name="carousel-next">
+                    <img src="assets/icons/material-symbols-next.svg" alt="Seta para a direita">
+                </div>
             </div>
+
         </section>
 
 
@@ -132,23 +365,26 @@
 
         
         <section id="sobre" class="container secao-sobre">
-            <div class="secao-sobre__conteudo">
-                <h2 class="titulo-secao">Sobre Nós: Seu Lar, Nossa Missão.</h2>
-                <ul class="secao-sobre__lista">
-                    <li class="secao-sobre__item-lista">
+            <h2 class="titulo-secao-sobre">Sobre Nós: Seu Lar, Nossa Missão.</h2>
+            <div class="secao-sobre-conteudo">
+                <ul class="secao-sobre-lista">
+                    <li>
                         Na Lar Doce Click, compreendemos que encontrar um novo lar é um passo significativo em sua vida. Nossa missão é transformar essa jornada em uma experiência tranquila, segura e bem-sucedida.
                     </li>
-                    <li class="secao-sobre__item-lista">
+                    <li>
                         Com uma equipe dedicada e profissional, atuamos com confiança máxima para conectar você ao seu imóvel ideal. Seja para alugar ou comprar, nosso compromisso é oferecer um serviço de excelência, garantindo que você encontre o lar perfeito com total segurança e zero preocupações.
                     </li>
-                    <li class="secao-sobre__item-lista">
+                    <li>
                         Sua busca pelo lar dos sonhos começa aqui.
                     </li>
                 </ul>
+                <div class="secao-sobre-imagem-container">
+                    <div class="secao-sobre-imagem-wrapper">
+                        <img src="assets/images/caneta_mao.png" alt="Mão segurando caneta sobre um contrato com uma casa modelo ao lado." class="imagem-caneta">
+                    </div>
+                </div>
             </div>
-            <div class="secao-sobre__imagem-wrapper">
-                <img src="assets/images/mao_caneta.png" alt="Mão segurando caneta sobre um contrato com uma casa modelo ao lado.">
-            </div>
+            <img src="assets/images/roxo.png" alt="Curvas decorativas" class="secao-sobre-curvas">
         </section>
 
 
@@ -157,85 +393,107 @@
 
         <section id="depoimentos" class="container secao-depoimentos">
             
-            <h2 class="titulo-secao">Quem Confia em Nós:</h2>
-            
-            <div class="carousel-container">
-                <div class="carousel-slide">
-                    <div class="depoimento">
-                        <a href="https://www.instagram.com/visaojrufop/" target="_blank" rel="noopener noreferrer">
-                            <figure class="depoimento-figura">
-                                <img class="depoimento-avatar" src="assets/images/avatar_marcos.jpg" alt="Avatar de Marcos Filho">
-                                <figcaption class="depoimento-autor">Marcos Paulo</figcaption>
-                            </figure>
-                        </a>
+            <h2 class="titulo-secao">O que Dizem Aqueles que Confiam:</h2>
 
-                        <blockquote class="depoimento-texto">
-                            “O atendimento foi incrível! Encontrei o apartamento perfeito em menos de uma semana. Todo o processo foi super transparente e rápido. Recomendo de olhos fechados!”
-                        </blockquote>
+            <div class="carousel-wrapper" data-items-per-view="1">
+                <div class="carousel-prev" id="carousel-prev" name="carousel-prev">
+                    <img src="assets/icons/material-symbols-back.svg" alt="Seta para a esquerda">
+                </div>
+                <div class="carousel-container">
+                    <div class="carousel-slide">
 
-                        <div class="depoimento-avaliacao">
-                            <img src="assets/icons/fluent-color--star-48.svg" alt="Estrela de avaliação">
-                            <img src="assets/icons/fluent-color--star-48.svg" alt="Estrela de avaliação">
-                            <img src="assets/icons/fluent-color--star-48.svg" alt="Estrela de avaliação">
-                            <img src="assets/icons/fluent-color--star-48.svg" alt="Estrela de avaliação">
-                            <img src="assets/icons/fluent-color--star-48.svg" alt="Estrela de avaliação">
+                        <!--1º Depoimento (Marcos Sampaio)-->
+                        <div class="carousel-item">
+                            <div class="depoimento">
+                                <a href="https://www.instagram.com/visaojrufop/" target="_blank" rel="noopener noreferrer">
+                                    <figure class="depoimento-figura">
+                                        <img class="depoimento-avatar" src="assets/images/avatar_marcos.jpg" alt="Avatar de Marcos Filho">
+                                        <figcaption class="depoimento-autor">Marcos Sampaio</figcaption>
+                                    </figure>
+                                </a>
+
+                                <blockquote class="depoimento-texto">
+                                    “O atendimento foi incrível! Encontrei o apartamento perfeito em menos
+                                        de uma semana. Todo o processo foi super transparente e rápido.
+                                        Recomendo de olhos fechados!”
+                                </blockquote>
+
+                                <div class="depoimento-avaliacao">
+                                    <img src="assets/icons/fluent-color--star-48.svg" alt="Estrela de avaliação">
+                                    <img src="assets/icons/fluent-color--star-48.svg" alt="Estrela de avaliação">
+                                    <img src="assets/icons/fluent-color--star-48.svg" alt="Estrela de avaliação">
+                                    <img src="assets/icons/fluent-color--star-48.svg" alt="Estrela de avaliação">
+                                    <img src="assets/icons/fluent-color--star-48.svg" alt="Estrela de avaliação">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--2º Depoimento (Alice Alencar)-->
+                        
+                        <div class="carousel-item">
+                            <div class="depoimento">
+                                <a href="https://www.instagram.com/visaojrufop/" target="_blank" rel="noopener noreferrer">
+                                    <figure class="depoimento-figura">
+                                        <img class="depoimento-avatar" src="assets/images/avatar_alice.jpg" alt="Avatar de Marcos Filho">
+                                        <figcaption class="depoimento-autor">Alice Alencar</figcaption>
+                                    </figure>
+                                </a>
+
+                                <blockquote class="depoimento-texto">
+                                    "O processo de busca e aluguel foi incrivelmente rápido e descomplicado.
+                                        A plataforma online é muito fácil de usar e consegui resolver quase tudo
+                                        pelo celular, desde a visita virtual até a assinatura digital do contrato.
+                                        Recomendo demais!"
+                                </blockquote>
+
+                                <div class="depoimento-avaliacao">
+                                    <img src="assets/icons/fluent-color--star-48.svg" alt="Estrela de avaliação">
+                                    <img src="assets/icons/fluent-color--star-48.svg" alt="Estrela de avaliação">
+                                    <img src="assets/icons/fluent-color--star-48.svg" alt="Estrela de avaliação">
+                                    <img src="assets/icons/fluent-color--star-48.svg" alt="Estrela de avaliação">
+                                    <img src="assets/icons/fluent-color--star-48.svg" alt="Estrela de avaliação">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--3º Depoimento (Juliana Martins)-->
+
+                        <div class="carousel-item">
+                            <div class="depoimento">
+                                <a href="https://www.instagram.com/visaojrufop/" target="_blank" rel="noopener noreferrer">
+                                    <figure class="depoimento-figura">
+                                        <img class="depoimento-avatar" src="assets/images/avatar_juliana.jpg" alt="Avatar de Marcos Filho">
+                                        <figcaption class="depoimento-autor">Juliana Martins</figcaption>
+                                    </figure>
+                                </a>
+
+                                <blockquote class="depoimento-texto">
+                                    "Os imóveis são exatamente como nas fotos: lindos e bem cuidados.
+                                    Fiquei impressionada com a qualidade das opções. Estou muito satisfeita!"
+                                </blockquote>
+
+                                <div class="depoimento-avaliacao">
+                                    <img src="assets/icons/fluent-color--star-48.svg" alt="Estrela de avaliação">
+                                    <img src="assets/icons/fluent-color--star-48.svg" alt="Estrela de avaliação">
+                                    <img src="assets/icons/fluent-color--star-48.svg" alt="Estrela de avaliação">
+                                    <img src="assets/icons/fluent-color--star-48.svg" alt="Estrela de avaliação">
+                                    <img src="assets/icons/fluent-color--star-48.svg" alt="Estrela de avaliação">
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="depoimento">
-                        <a href="https://www.instagram.com/visaojrufop/" target="_blank" rel="noopener noreferrer">
-                            <figure class="depoimento-figura">
-                                <img class="depoimento-avatar" src="assets/images/avatar_marcos.jpg" alt="Avatar de Marcos Filho">
-                                <figcaption class="depoimento-autor">Marcos Paulo</figcaption>
-                            </figure>
-                        </a>
-
-                        <blockquote class="depoimento-texto">
-                            “O atendimento foi incrível! Encontrei o apartamento perfeito em menos de uma semana. Todo o processo foi super transparente e rápido. Recomendo de olhos fechados!”
-                        </blockquote>
-
-                        <div class="depoimento-avaliacao">
-                            <img src="assets/icons/fluent-color--star-48.svg" alt="Estrela de avaliação">
-                            <img src="assets/icons/fluent-color--star-48.svg" alt="Estrela de avaliação">
-                            <img src="assets/icons/fluent-color--star-48.svg" alt="Estrela de avaliação">
-                            <img src="assets/icons/fluent-color--star-48.svg" alt="Estrela de avaliação">
-                            <img src="assets/icons/fluent-color--star-48.svg" alt="Estrela de avaliação">
-                        </div>
-                    </div>
-
-                    <div class="depoimento">
-                        <a href="https://www.instagram.com/visaojrufop/" target="_blank" rel="noopener noreferrer">
-                            <figure class="depoimento-figura">
-                                <img class="depoimento-avatar" src="assets/images/avatar_marcos.jpg" alt="Avatar de Marcos Filho">
-                                <figcaption class="depoimento-autor">Marcos Paulo</figcaption>
-                            </figure>
-                        </a>
-
-                        <blockquote class="depoimento-texto">
-                            “O atendimento foi incrível! Encontrei o apartamento perfeito em menos de uma semana. Todo o processo foi super transparente e rápido. Recomendo de olhos fechados!”
-                        </blockquote>
-
-                        <div class="depoimento-avaliacao">
-                            <img src="assets/icons/fluent-color--star-48.svg" alt="Estrela de avaliação">
-                            <img src="assets/icons/fluent-color--star-48.svg" alt="Estrela de avaliação">
-                            <img src="assets/icons/fluent-color--star-48.svg" alt="Estrela de avaliação">
-                            <img src="assets/icons/fluent-color--star-48.svg" alt="Estrela de avaliação">
-                            <img src="assets/icons/fluent-color--star-48.svg" alt="Estrela de avaliação">
-                        </div>
+                    <div class="carousel-indicators">
+                        <div class="carousel-indicator"></div>
+                        <div class="carousel-indicator"></div>
+                        <div class="carousel-indicator"></div>
                     </div>
                 </div>
-
-                <div class="depoimento-paginador">
-                        <div class="paginacao__indicador"></div>
-                        <div class="paginacao__indicador paginacao__indicador--ativo"></div>
-                        <div class="paginacao__indicador"></div>
+                <div class="carousel-next" id="carousel-next" name="carousel-next">
+                    <img src="assets/icons/material-symbols-next.svg" alt="Seta para a direita">
                 </div>
-
             </div>
-
         </section>
 
-        <script src="scripts/dynamics.js"></script>
 
         <!-----------------------Seção de Contato----------------------->
 
@@ -269,7 +527,7 @@
                     </div>
 
                     <div class="cartao-contato__formulario">
-                        <form action="#" method="POST">
+                        <form id="contact-form">
                             
                             <div class="formulario-linha">
                                 <div class="grupo-formulario">
@@ -302,15 +560,17 @@
     
     <footer class="rodape">
         <a href="/">
-            <img src="assets/images/logo-light.png" alt="Logo da Imobiliária Lar Doce Click" class="rodape__logo">
+            <img src="assets/Logo-LarDoceClick.svg" alt="Logo da Imobiliária Lar Doce Click" class="rodape__logo">
         </a>
         <ul class="rodape__redes-sociais">
-            <li><a href="#" target="_blank"><img src="assets/images/ic-baseline-facebook.svg" alt="Facebook"></a></li>
-            <li><a href="#" target="_blank"><img src="assets/images/uil-instagram.svg" alt="Instagram"></a></li>
-            <li><a href="#" target="_blank"><img src="assets/images/mingcute-whatsapp-line.svg" alt="WhatsApp"></a></li>
+            <li><a href="https://www.instagram.com/visaojrufop/" target="_blank"><img src="assets/icons/facebook.svg" alt="Facebook"></a></li>
+            <li><a href="https://www.instagram.com/visaojrufop/" target="_blank"><img src="assets/icons/instagram.svg" alt="Instagram"></a></li>
+            <li><a href="https://www.instagram.com/visaojrufop/" target="_blank"><img src="assets/icons/whatsapp.svg" alt="WhatsApp"></a></li>
         </ul>
         <p class="rodape__copyright">© 2025 Lar Doce Click. Todos os direitos reservados.</p>
+        <p class="rodape__frase-adicional">Feito com <img src="assets/icons/image.png" alt="Coração" class="icon-heart"> para facilitar sua busca pelo lar dos seus sonhos.</p>
     </footer>
 
+    
 </body>
 </html>
