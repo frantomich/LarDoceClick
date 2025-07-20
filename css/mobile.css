@@ -2,17 +2,27 @@
 
 @media (max-width: 768px) {
     
-    .carousel-prev, .carousel-next {
+    /* Esconde as setas de navegação que não são necessárias no mobile */
+    .carousel-prev, 
+    .carousel-next {
         display: none;
     }
 
+    /* Ajusta o wrapper principal */
     .carousel-wrapper {
-        gap: 0; /* Remove o espaço, já que os botões sumiram */
-        padding: 0 1rem; /* Adiciona um pequeno padding para não colar nas bordas */
+        gap: 0; 
+        padding: 0 1rem;
     }
 
-    .carousel-container {
-        height: 350px;
+    /* Deixa a altura do contêiner e dos cards ser automática */
+    .carousel-container,
+    .cartao-imovel,
+    .cartao-beneficio {
+        height: auto; 
     }
 
+    /*Ajusta a altura da imagem do card de imóvel para mobile */
+    .cartao-imovel__imagem {
+        height: 200px; 
+    }
 }

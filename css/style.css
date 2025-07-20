@@ -31,12 +31,12 @@
     top: 0;
     left: 0;
     width: 100%;
-    padding: clamp(20px, 4vw, 40px) clamp(20px, 5vw, 40px); /* Padding responsivo */
+    padding: clamp(20px, 4vw, 40px) clamp(20px, 5vw, 40px); 
     z-index: 2; 
 }
 
 .secao-hero__logo {
-    width: clamp(120px, 15vw, 250px); /* Responsivo: mínimo 120px, máximo 250px */
+    width: clamp(120px, 15vw, 250px); 
     height: auto;
 }
 
@@ -48,11 +48,11 @@
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    margin-top: 120px; /* Adiciona margem superior para evitar sobreposição com a logo */
+    margin-top: 120px; 
 }
 
 .secao-hero__titulo {
-    font-size: clamp(28px, 5vw, 48px); /* Responsivo: mínimo 28px, máximo 48px */
+    font-size: clamp(28px, 5vw, 48px); 
     font-weight: var(--peso-bold);
     text-shadow: var(--sombra-texto); 
     max-width: 900px;
@@ -60,7 +60,7 @@
 }
 
 .secao-hero__subtitulo {
-    font-size: clamp(16px, 2.5vw, 20px); /* Responsivo: mínimo 16px, máximo 20px */
+    font-size: clamp(16px, 2.5vw, 20px); 
     font-weight: var(--peso-semibold);
     max-width: 66ch;
     margin-bottom: 20px;
@@ -70,7 +70,7 @@
 
 /* Botão de Chamada para Ação */
 .botao-cta {
-    width: clamp(200px, 25%, 300px); /* Responsivo: mínimo 200px, máximo 300px */
+    width: clamp(200px, 25%, 300px); 
     margin-top: 10px;
 }
 
@@ -84,8 +84,9 @@
 
 /* --- Cartão de Benefício --- */
 .cartao-beneficio {
-    width: 320px;
-    height: 320px;
+    width: 100%;     
+    /* max-width: 320px; */
+    height: 400px;
     align-items: center;
     justify-content: center; 
     gap: 25px;
@@ -157,10 +158,11 @@
 
 /* --- Cartão de Imóvel --- */
 .cartao-imovel {
-    width: 395px;
+    width: 100%;       
+    /* max-width: 395px;    */
     height: 480px; 
     border: none;
-    box-sizing: border-box;
+    box-sizing: content-box;
     border-radius: 12px; 
     box-shadow: var(--sombra-cartao); 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -665,26 +667,26 @@
   .cartao-contato { flex-direction: column; }
   .cartao-contato__mapa, .cartao-contato__formulario-wrapper { border-radius: 8px; }
   .secao-sobre .titulo-secao { text-align: center; }
-  .secao-hero__conteudo-central { margin-top: 110px; } /* Ajusta margem para tablet */
+  .secao-hero__conteudo-central { margin-top: 110px; } 
 }
 
 /* Mobile (até 768px) */
 @media (max-width: 768px) {
   .container { padding: 40px 15px; }
   .secao-hero { min-height: auto; padding: 60px 20px; }
-  .secao-hero__conteudo-central { margin-top: 100px; } /* Ajusta margem para mobile */
-  .secao-hero__barra-topo { padding: 20px 20px; } /* Reduz padding da barra superior */
+  .secao-hero__conteudo-central { margin-top: 100px; } 
+  .secao-hero__barra-topo { padding: 20px 20px; } 
   .cartao-beneficio, .cartao-imovel { min-width: 300px; }
 }
 .secao-hero__titulo .titulo-separador {
-    display: inline-block; /* Crucial para que o HR não quebre a linha */
-    vertical-align: middle; /* Ajuda a alinhar a linha com o texto */
-    width: 50px; /* Define a largura da linha */
-    height: 2px; /* Define a espessura da linha */
-    background-color: white; /* Define a cor da linha */
-    border: none; /* Remove a borda padrão do HR */
-    margin: 0 15px; /* Adiciona um espaçamento horizontal para separar do texto */
-    opacity: 0.8; /* Adiciona uma leve transparência */
+    display: inline-block; 
+    vertical-align: middle; 
+    width: 50px; 
+    height: 2px; 
+    background-color: white; 
+    border: none; 
+    margin: 0 15px; 
+    opacity: 0.8; 
 }
 
 /* === RESPONSIVIDADE AVANÇADA === */
@@ -699,10 +701,10 @@
     padding: 15px 15px; 
   }
   .secao-hero__titulo {
-    font-size: clamp(24px, 6vw, 32px); /* Ajuste para telas muito pequenas */
+    font-size: clamp(24px, 6vw, 32px); 
   }
   .secao-hero__subtitulo {
-    font-size: clamp(14px, 3.5vw, 18px); /* Ajuste para telas muito pequenas */
+    font-size: clamp(14px, 3.5vw, 18px); 
   }
 }
 
@@ -726,10 +728,10 @@
     margin-top: 140px; 
   }
   .secao-hero__titulo {
-    font-size: clamp(36px, 4vw, 52px); /* Maior em telas grandes */
+    font-size: clamp(36px, 4vw, 52px); 
   }
   .secao-hero__subtitulo {
-    font-size: clamp(18px, 2vw, 24px); /* Maior em telas grandes */
+    font-size: clamp(18px, 2vw, 24px); 
   }
 }
 
@@ -740,7 +742,7 @@
     gap: 15px;
   }
   .secao-hero__logo {
-    width: clamp(100px, 20vw, 140px); /* Logo menor em telas muito pequenas */
+    width: clamp(100px, 20vw, 140px); 
   }
   .secao-hero__titulo {
     font-size: clamp(20px, 7vw, 28px);
@@ -788,4 +790,34 @@
   .titulo-secao, .secao-sobre__lista {
     text-align: center;
   }
+}
+
+
+/* === LÓGICA RESPONSIVA DOS CARDS DO CARROSSEL === */
+
+
+/* Para telas com 1081px ou mais (mostra 3 cards) */
+@media (min-width: 1081px) {
+    .secao-imoveis .carousel-item,
+    .secao-beneficios .carousel-item {
+        
+        flex: 0 0 calc(33.333% - (var(--carousel-gap) * 2 / 3));
+    }
+}
+
+/* Para telas entre 769px e 1080.98px (mostra 2 cards) */
+@media (min-width: 769px) and (max-width: 1080.98px) {
+    .secao-imoveis .carousel-item,
+    .secao-beneficios .carousel-item {
+        
+        flex: 0 0 calc(50% - (var(--carousel-gap) / 2));
+    }
+}
+
+/* Para telas com menos de 769px (mostra 1 card) */
+@media (max-width: 768.98px) {
+    .secao-imoveis .carousel-item,
+    .secao-beneficios .carousel-item {
+        flex: 0 0 100%;
+    }
 }
