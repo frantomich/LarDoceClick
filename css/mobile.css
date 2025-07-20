@@ -65,6 +65,7 @@
         display: none; 
     }
 
+    /* Ajusta o wrapper principal */
     .carousel-wrapper {
         gap: 0; 
         padding: 0 1rem; 

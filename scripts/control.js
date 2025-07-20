@@ -2,7 +2,7 @@
 
 // Espera o DOM estar completamente carregado antes de executar o script:
 document.addEventListener('DOMContentLoaded', () => {
-    // Seleciona TODOS os 'wrappers' de carrossel da página:
+    // Seleciona TODOS os wrappers de carrossel da página:
     const allCarouselWrappers = document.querySelectorAll('.carousel-wrapper');
 
     for (const wrapper of allCarouselWrappers) {
@@ -16,16 +16,24 @@ document.addEventListener('DOMContentLoaded', () => {
         const indicatorsContainer = wrapper.querySelector('.carousel-indicators');
 
         const totalItems = items.length;
+<<<<<<< HEAD
         if (totalItems === 0) continue; // Pula para o próximo se o carrossel estiver vazio
 
         // Inicia o carrossel com o item do meio
         let currentIndex = Math.floor(totalItems / 2);
+=======
+        if (totalItems === 0) continue; 
+
+        let currentIndex = 0;
+        let itemsPerView = 3; // Valor padrão
+>>>>>>> main
         
         let isDragging = false;
         let startX = 0;
         let currentTranslate = 0;
         let prevTranslate = 0;
 
+<<<<<<< HEAD
         // Função para criar os indicadores (bolinhas)
         function createIndicators() {
             if (!indicatorsContainer) return;
@@ -65,6 +73,61 @@ document.addEventListener('DOMContentLoaded', () => {
             items.forEach((item, i) => {
                 item.classList.toggle('active-item', i === currentIndex);
             });
+=======
+        
+        function updateItemsPerView() {
+            const fixedItemsPerView = parseInt(wrapper.dataset.itemsPerView, 10);
+
+            if (!isNaN(fixedItemsPerView) && fixedItemsPerView > 0) {
+                itemsPerView = fixedItemsPerView;
+            } else {
+                const width = window.innerWidth;
+                if (width < 769) { // <-- ATUALIZADO para corresponder ao CSS
+                    itemsPerView = 1;
+                } else if (width < 1081) { // <-- ATUALIZADO para corresponder ao CSS
+                    itemsPerView = 2;
+                } else {
+                    itemsPerView = 3;
+                }
+            }
+        }
+
+
+        // Função para criar os indicadores (bolinhas)
+        function createIndicators() {
+            if (!indicatorsContainer) return;
+            indicatorsContainer.innerHTML = ''; 
+            const numPages = Math.ceil(totalItems / itemsPerView);
+            for (let i = 0; i < numPages; i++) {
+                const indicator = document.createElement('div');
+                indicator.classList.add('carousel-indicator');
+                indicator.addEventListener('click', () => moveToIndex(i * itemsPerView));
+                indicatorsContainer.appendChild(indicator);
+            }
+        }
+
+        // Função para atualizar qual indicador está ativo
+        function updateIndicators() {
+            if (!indicatorsContainer) return;
+            const indicators = indicatorsContainer.querySelectorAll('.carousel-indicator');
+            const currentPage = Math.floor(currentIndex / itemsPerView);
+            indicators.forEach((indicator, idx) => {
+                indicator.classList.toggle('carousel-indicator-active', idx === currentPage);
+            });
+        }
+
+        // Função para mover o carrossel para um índice específico
+        function moveToIndex(index) {
+            // Garante que o índice não saia dos limites
+            currentIndex = Math.max(0, Math.min(index, totalItems - itemsPerView));
+            
+            const itemWidth = items[0].offsetWidth;
+            const gap = parseFloat(getComputedStyle(slide).gap) || 0;
+            const offset = -currentIndex * (itemWidth + gap);
+            
+            slide.style.transform = `translateX(${offset}px)`;
+            prevTranslate = offset; 
+>>>>>>> main
 
             updateIndicators();
         }
@@ -73,11 +136,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (prevBtn && nextBtn) {
             prevBtn.addEventListener('click', () => {
+<<<<<<< HEAD
                 moveToIndex(currentIndex - 1);
             });
 
             nextBtn.addEventListener('click', () => {
                 moveToIndex(currentIndex + 1);
+=======
+                moveToIndex(currentIndex - itemsPerView);
+            });
+
+            nextBtn.addEventListener('click', () => {
+                moveToIndex(currentIndex + itemsPerView);
+>>>>>>> main
             });
         }
 
@@ -95,7 +166,11 @@ document.addEventListener('DOMContentLoaded', () => {
         function dragStart(event) {
             isDragging = true;
             startX = event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
+<<<<<<< HEAD
             slide.style.transition = 'none'; // Remove transição durante o arrastar
+=======
+            slide.style.transition = 'none'; 
+>>>>>>> main
             slide.style.cursor = 'grabbing';
         }
 
@@ -113,6 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
             slide.style.cursor = 'grab';
 
             const movedBy = currentTranslate - prevTranslate;
+<<<<<<< HEAD
             const threshold = 50; // Distância mínima para mudar de slide
 
             if (movedBy < -threshold && currentIndex < totalItems - 1) {
@@ -121,6 +197,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 moveToIndex(currentIndex - 1);
             } else {
                 moveToIndex(currentIndex); // Volta para o slide atual se não arrastar o suficiente
+=======
+            const threshold = 100; // Aumenta o threshold para evitar mudanças acidentais
+
+            if (movedBy < -threshold) {
+                moveToIndex(currentIndex + itemsPerView);
+            } else if (movedBy > threshold) {
+                moveToIndex(currentIndex - itemsPerView);
+            } else {
+                moveToIndex(currentIndex); 
+>>>>>>> main
             }
         }
 
@@ -129,6 +215,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Configuração inicial e reajuste no redimensionamento da janela
         function setupCarousel() {
+<<<<<<< HEAD
             createIndicators();
             // Move para o índice atual (que pode ser o do meio na primeira carga)
             moveToIndex(currentIndex);
@@ -174,6 +261,47 @@ document.addEventListener('DOMContentLoaded', () => {
     } // Fim do loop 'for (const wrapper of allCarouselWrappers)'
 
     // --- LÓGICA DO FORMULÁRIO DE CONTATO (permanece a mesma) ---
+=======
+            updateItemsPerView();
+            createIndicators();
+            moveToIndex(0); // Sempre começa do primeiro item
+        }
+
+        window.addEventListener('resize', setupCarousel);
+        setupCarousel(); 
+
+        // --- LÓGICA PARA PREVENIR CLIQUE ACIDENTAL AO ARRASTAR ---
+        const clickableLinks = wrapper.querySelectorAll('a');
+        clickableLinks.forEach(link => {
+            let isClickValid = false;
+
+            link.addEventListener('click', (e) => {
+                if (!isClickValid) {
+                    e.preventDefault();
+                }
+            });
+
+            link.addEventListener('mousedown', () => {
+                isClickValid = true;
+            });
+
+            link.addEventListener('mousemove', () => {
+                isClickValid = false;
+            });
+
+            // Adiciona o listener de duplo clique para abrir o link
+            link.addEventListener('dblclick', (e) => {
+                e.preventDefault(); 
+                const url = link.href;
+                if (url) {
+                    window.open(url, link.target || '_blank');
+                }
+            });
+        });
+    } 
+
+    // --- LÓGICA DO FORMULÁRIO DE CONTATO  ---
+>>>>>>> main
     emailjs.init('nRFCdVlUADZocJb5U');
 
     const contactForm = document.getElementById('contact-form');
