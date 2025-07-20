@@ -44,6 +44,11 @@
     }
 
     /* --- Seção Hero --- */
+
+    .secao-hero__logo {
+    position: center;
+    height: auto;
+    }
     .secao-hero { 
         min-height: auto; 
         padding: 80px 20px 60px 20px; 
@@ -57,7 +62,7 @@
 
     /* --- Carrossel --- */
     .carousel-prev, .carousel-next {
-        display: none; /* Esconde as setas laterais */
+        display: none; 
     }
 
     .carousel-wrapper {
@@ -76,7 +81,7 @@
     }
 
     .cartao-imovel {
-        width: 300px; /* Diminui o tamanho do card de imóvel */
+        width: 300px; 
         height: auto;
     }
 
@@ -102,7 +107,7 @@
     }
 
     .secao-sobre-curvas {
-        display: none; /* Esconde as curvas decorativas */
+        display: none; 
     }
 
     /* --- Seção Contato --- */
@@ -117,11 +122,11 @@
 
     /* --- Seção Depoimentos --- */
     .depoimento {
-        padding: 20px 15px; /* Adiciona padding lateral para o texto não cortar */
+        padding: 20px 15px; 
     }
 
     .depoimento-texto {
-        font-size: 16px; /* Reduz um pouco a fonte para melhor encaixe */
+        font-size: 16px; 
         line-height: 1.6;
     }
 }
