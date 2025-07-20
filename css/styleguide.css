@@ -32,6 +32,7 @@
   --peso-bold: 700;
 
   /* Efeitos */
+<<<<<<< HEAD
   --sombra-cartao: 0px 2px 4px rgba(0, 0, 0, 0.5);
   --sombra-texto: 0px 2px 4px rgba(0, 0, 0, 0.5);
 
@@ -42,6 +43,10 @@
 ::before,
 ::after {
   box-sizing: border-box;
+=======
+  --sombra-cartao: 0 4px 10px rgba(0, 0, 0, 0.25);
+  --sombra-texto: 0px 2px 4px rgba(0, 0, 0, 0.25);
+>>>>>>> 7950d5c26fd32bf88d3255c81bec34cb30f4b6de
 }
 
 /* === CLASSES DE UTILIDADE === */
@@ -98,7 +103,10 @@
   transition: transform 0.2s ease;
 }
 
-.botao:hover { transform: scale(1.05); }
+.botao:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
 /* --- Cartão (Base) --- */
 .cartao {
@@ -109,6 +117,8 @@
   display: flex;
   flex-direction: column;
 }
+
+/* --------------- Carrossel --------------- */
 
 .carousel-wrapper {
     display: flex;
@@ -133,7 +143,7 @@
     height: 50px;
     display: flex;
     align-items: center;
-    justify-items: center;
+    justify-content: center;
     background: var(--gradiente-primario); 
     border-radius: 50%; 
     padding: 10px; 
@@ -152,7 +162,7 @@
     display: flex;
     justify-content: center;
     gap: 12px;
-    padding: 10px;
+    padding: 20px;
 }
 
 .carousel-indicator {
@@ -161,12 +171,13 @@
     background-color: #d9d9d9; 
     border-radius: 4px;
     box-shadow: var(--sombra-cartao);
+    transition: transform 0.3s ease;
 }
 
 .carousel-indicator-active {
     background-color: var(--cor-primaria-clara);
     transform: scale(1.1);
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .carousel-item {
