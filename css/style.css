@@ -9,6 +9,7 @@
 .secao-hero {
     position: relative; 
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 100vh; 
@@ -93,7 +94,7 @@
     text-align: center;
     border-radius: 16px;
     box-sizing: border-box;
-    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05); 
+    box-shadow: var(--sombra-cartao);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -162,7 +163,7 @@
     border: none;
     box-sizing: border-box;
     border-radius: 12px; 
-    box-shadow: var(--sombra-cartao); 
+    box-shadow: var(--sombra-cartao);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -672,8 +673,8 @@
 @media (max-width: 768px) {
   .container { padding: 40px 15px; }
   .secao-hero { min-height: auto; padding: 60px 20px; }
-  .secao-hero__conteudo-central { margin-top: 100px; } /* Ajusta margem para mobile */
-  .secao-hero__barra-topo { padding: 20px 20px; } /* Reduz padding da barra superior */
+  .secao-hero__conteudo-central { margin-top: 100px;} /* Ajusta margem para mobile */
+  .secao-hero__barra-topo {display:flex; flex-direction: column; align-items: center; padding: 20px 20px;} /* Reduz padding da barra superior */
   .cartao-beneficio, .cartao-imovel { min-width: 300px; }
 }
 .secao-hero__titulo .titulo-separador {
@@ -695,8 +696,11 @@
     margin-top: 80px; 
     padding: 0 10px;
   }
-  .secao-hero__barra-topo { 
-    padding: 15px 15px; 
+  .secao-hero__barra-topo {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 15px;
   }
   .secao-hero__titulo {
     font-size: clamp(24px, 6vw, 32px); /* Ajuste para telas muito pequenas */
