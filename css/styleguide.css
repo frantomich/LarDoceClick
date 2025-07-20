@@ -32,21 +32,8 @@
   --peso-bold: 700;
 
   /* Efeitos */
-<<<<<<< HEAD
   --sombra-cartao: 0px 2px 4px rgba(0, 0, 0, 0.5);
   --sombra-texto: 0px 2px 4px rgba(0, 0, 0, 0.5);
-
-    --carousel-gap: 2rem; /* Espaçamento entre os itens do carrossel */
-}
-
-*,
-::before,
-::after {
-  box-sizing: border-box;
-=======
-  --sombra-cartao: 0 4px 10px rgba(0, 0, 0, 0.25);
-  --sombra-texto: 0px 2px 4px rgba(0, 0, 0, 0.25);
->>>>>>> 7950d5c26fd32bf88d3255c81bec34cb30f4b6de
 }
 
 /* === CLASSES DE UTILIDADE === */
@@ -103,10 +90,7 @@
   transition: transform 0.2s ease;
 }
 
-.botao:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+.botao:hover { transform: scale(1.05); }
 
 /* --- Cartão (Base) --- */
 .cartao {
@@ -117,8 +101,6 @@
   display: flex;
   flex-direction: column;
 }
-
-/* --------------- Carrossel --------------- */
 
 .carousel-wrapper {
     display: flex;
@@ -132,12 +114,7 @@
 
 .carousel-container {
     overflow: hidden;
-<<<<<<< HEAD
     position: relative;
-=======
-    padding: 0 1rem;
-    box-sizing: border-box;
->>>>>>> main
 }
 
 .carousel-prev, .carousel-next {
@@ -145,7 +122,7 @@
     height: 50px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-items: center;
     background: var(--gradiente-primario); 
     border-radius: 50%; 
     padding: 10px; 
@@ -155,21 +132,15 @@
 
 .carousel-slide {
     display: flex;
-<<<<<<< HEAD
     gap: 30px; /* Adiciona um espaçamento entre os cartões */
     transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
-=======
-    height: 100%;
-    gap: var(--carousel-gap); 
-    transition: transform 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55);
->>>>>>> main
 }
 
 .carousel-indicators {
     display: flex;
     justify-content: center;
     gap: 12px;
-    padding: 20px;
+    padding: 10px;
 }
 
 .carousel-indicator {
@@ -178,22 +149,17 @@
     background-color: #d9d9d9;
     border-radius: 50%; /* Isso cria a forma de círculo */
     box-shadow: var(--sombra-cartao);
-<<<<<<< HEAD
     cursor: pointer; /* Adiciona um cursor para indicar que é clicável */
     transition: background-color 0.3s ease, transform 0.3s ease; /* Adiciona transição suave */
-=======
-    transition: transform 0.3s ease;
->>>>>>> main
 }
 
 .carousel-indicator-active {
     background-color: var(--cor-primaria-clara);
     transform: scale(1.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.2s ease-in-out;
 }
 
 .carousel-item {
-<<<<<<< HEAD
     /* Define uma largura base para os itens. 
        Eles não vão mais preencher o espaço, mas ter um tamanho fixo.
        O 'flex-shrink: 0' impede que eles encolham. */
@@ -203,32 +169,6 @@
     transition: transform 0.4s ease, opacity 0.4s ease;
     transform: scale(0.9); /* Itens "inativos" são um pouco menores */
     opacity: 0.7; /* Itens "inativos" ficam um pouco transparentes */
-=======
-    /*flex-shrink: 0;  */
-    width: 100%; 
-    height: 100%;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    
-}
-
-
-.carousel-wrapper[data-items-per-view="1"] .carousel-item {
-    flex-basis: 100%; 
-    width: 100%;      
-    flex-shrink: 0;   
-}
-
-/* Media queries para responsividade do carrossel */
-/* As regras de largura foram removidas daqui para serem controladas pelo JS */
-@media (max-width: 992px) {
-    .carousel-prev, .carousel-next {
-        /* Estilos para botões em telas menores, se necessário */
-    }
->>>>>>> main
 }
 
 

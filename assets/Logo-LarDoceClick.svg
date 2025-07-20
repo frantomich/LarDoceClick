@@ -2,8 +2,8 @@
 <svg
    width="500"
    zoomAndPan="magnify"
-   viewBox="0 0 375 168.75"
-   height="225"
+   viewBox="0 0 375 192"
+   height="256"
    preserveAspectRatio="xMidYMid"
    version="1.2"
    id="svg213"
@@ -24,8 +24,8 @@
      inkscape:deskcolor="#505050"
      showgrid="false"
      inkscape:zoom="1.054"
-     inkscape:cx="250"
-     inkscape:cy="175.9962"
+     inkscape:cx="249.52562"
+     inkscape:cy="175.04744"
      inkscape:window-width="1366"
      inkscape:window-height="708"
      inkscape:window-x="0"
@@ -49,7 +49,7 @@
   </defs>
   <g
      id="840a55d8c9"
-     transform="matrix(1.3491078,0,0,1.3491078,-67.147223,-166.77872)">
+     transform="matrix(1.3491078,0,0,1.3491078,-67.147223,-154.77872)">
     <g
        clip-rule="nonzero"
        clip-path="url(#406292919e)"
