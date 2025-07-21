@@ -41,7 +41,7 @@
 .container {
   width: 100%;
   max-width: 1366px;
-  padding: 2rem;
+  padding: 4rem;
 }
 
 .titulo-secao {
@@ -49,7 +49,8 @@
   font-weight: var(--peso-bold);
   color: var(--cor-primaria-clara);
   text-align: center;
-  padding: 4rem;
+  padding-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .rolagem-horizontal {
