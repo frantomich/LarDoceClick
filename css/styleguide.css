@@ -32,21 +32,9 @@
   --peso-bold: 700;
 
   /* Efeitos */
-<<<<<<< HEAD
-  --sombra-cartao: 0px 2px 4px rgba(0, 0, 0, 0.5);
-  --sombra-texto: 0px 2px 4px rgba(0, 0, 0, 0.5);
-
-    --carousel-gap: 2rem; /* Espaçamento entre os itens do carrossel */
-}
-
-*,
-::before,
-::after {
-  box-sizing: border-box;
-=======
+  --carousel-gap: 3rem; /* Espaçamento entre os itens do carrossel */
   --sombra-cartao: 0 4px 10px rgba(0, 0, 0, 0.25);
   --sombra-texto: 0px 2px 4px rgba(0, 0, 0, 0.25);
->>>>>>> 7950d5c26fd32bf88d3255c81bec34cb30f4b6de
 }
 
 /* === CLASSES DE UTILIDADE === */
@@ -125,7 +113,7 @@
     width: 100%;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+    padding: 1rem;
     gap: 1rem;
     margin: 0 auto;
 }
@@ -134,7 +122,7 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-    padding: 0 1rem;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -154,7 +142,8 @@
 .carousel-slide {
     display: flex;
     height: 100%;
-    gap: var(--carousel-gap); 
+    gap: var(--carousel-gap);
+    padding: 1rem;
     transition: transform 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
@@ -189,9 +178,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
 }
-
 
 .carousel-wrapper[data-items-per-view="1"] .carousel-item {
     flex-basis: 100%; 
