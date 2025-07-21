@@ -222,4 +222,10 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // --- LÓGICA PARA PREVENIR O MENU DE CONTEXTO ---
+    document.addEventListener('contextmenu', (event) => {
+            event.preventDefault();
+    });
+
 });
