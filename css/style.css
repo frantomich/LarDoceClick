@@ -81,6 +81,7 @@
 
 .secao-beneficios {
     background-color: var(--cor-fundo); 
+    padding: 80px 0; 
 }
 
 /* --- Cartão de Benefício --- */
@@ -155,6 +156,7 @@
 
 .secao-imoveis {
     background-color: var(--cor-fundo); 
+    padding: 80px 0; 
 }
 
 /* --- Cartão de Imóvel --- */
