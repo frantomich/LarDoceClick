@@ -63,7 +63,7 @@ Acesse o projeto completo em:
 
 ## 📁 Estrutura de Arquivos
 
-bash
+```bash
 lar-doce-click/
 ├── assets/
 │   ├── images/         # Imagens dos imóveis, banners, etc.
@@ -75,7 +75,7 @@ lar-doce-click/
 ├── index.html          # Arquivo principal da aplicação
 ├── LICENSE             # Arquivo da licença do projeto
 └── README.md           # Documentação do projeto
-
+```
 
 ---
 
@@ -110,18 +110,18 @@ lar-doce-click/
 
 ### 🚀 Passo a Passo
 
-bash
+```bash
 # 1. Clone o repositório
-git clone https://github.com/[USUARIO_OU_ORGANIZACAO]/[NOME_DO_REPOSITORIO].git
+git clone https://github.com/frantomich/LarDoceClick.git
 
 # 2. Acesse o diretório
-cd [NOME_DO_REPOSITORIO]
+cd [LarDoceClick]
 
 # 3. Abra no VSCode
 code .
 
 # 4. Execute com Live Server no arquivo `index.html`
-
+```
 
 ---
 
