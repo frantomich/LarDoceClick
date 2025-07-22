@@ -95,7 +95,7 @@ Acesse o projeto completo em:
 git clone https://github.com/frantomich/LarDoceClick.git
 
 # 2. Acesse o diretório
-cd [LarDoceClick]
+cd LarDoceClick
 
 # 3. Abra no VSCode
 code .
