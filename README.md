@@ -76,7 +76,9 @@ lar-doce-click/
 ├── LICENSE             # Arquivo da licença do projeto
 └── README.md           # Documentação do projeto
 
+
 ---
+
 
 ## 🛠 Tecnologias e Ferramentas
 
