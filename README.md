@@ -171,6 +171,8 @@ code .
 | ![](https://via.placeholder.com/100) <br> *[Nome do Estudante 3]* | [GitHub](https://github.com/[GITHUB_USER_3]) | [LinkedIn](https://www.linkedin.com/in/[LINKEDIN_USER_3]/) |
 | ![](https://via.placeholder.com/100) <br> *[Nome do Estudante 4]* | [GitHub](https://github.com/[GITHUB_USER_4]) | [LinkedIn](https://www.linkedin.com/in/[LINKEDIN_USER_4]/) |
 | ![](https://via.placeholder.com/100) <br> *[Nome do Estudante 5]* | [GitHub](https://github.com/[GITHUB_USER_5]) | [LinkedIn](https://www.linkedin.com/in/[LINKEDIN_USER_5]/) |
+| ![](https://via.placeholder.com/100) <br> *[Nome do Estudante 6]* | [GitHub](https://github.com/[GITHUB_USER_5]) | [LinkedIn](https://www.linkedin.com/in/[LINKEDIN_USER_5]/) |
+
 
 ---
 
