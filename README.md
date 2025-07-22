@@ -185,7 +185,7 @@ code .
 | ![](https://via.placeholder.com/100) <br> *Franklin Liesner Tomich* | [GitHub](https://github.com/frantomich) | [LinkedIn](https://www.linkedin.com/in/franklin-l-tomich-b6256936a/) |
 | ![](https://via.placeholder.com/100) <br> *Kauã*   | [GitHub](https://github.com/kauakirk) | [LinkedIn](https://www.linkedin.com/in/kaua-k-992400209/) |
 | ![](https://via.placeholder.com/100) <br> *Kelvin* | [GitHub](https://github.com/[GITHUB_USER_3]) | [LinkedIn](https://www.linkedin.com/in/[LINKEDIN_USER_3]/) |
-| ![](https://via.placeholder.com/100) <br> *Mateus* | [GitHub](https://github.com/[GITHUB_USER_3]) | [LinkedIn](https://www.linkedin.com/in/[LINKEDIN_USER_3]/) |
+| ![](https://via.placeholder.com/100) <br> *Mateus* | [GitHub](https://github.com/mateus2911 ) | [LinkedIn](https://www.linkedin.com/in/[LINKEDIN_USER_3]/) |
 | ![](https://via.placeholder.com/100) <br> *Vitória de Souza Miranda* | [GitHub](https://github.com/vitoriasmiranda) | [LinkedIn](https://www.linkedin.com/in/vitoriasmiranda/) |
 
 ---
