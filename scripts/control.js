@@ -5,15 +5,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --------- LÓGICA PARA DESABILITAR O LOADER ---------
 
+    // Tempo mínimo para o loader ser exibido (em milissegundos):
+    const minimumLoadTime = 1000;
+
     // Seleciona os elementos necessários para desabilitar o loader
     const loader = document.getElementById('loader');
     const body = document.body;
 
     // Esconde o loader
-    this.setTimeout(() => loader.classList.add('hidden'), 2000);
+    this.setTimeout(() => loader.classList.add('hidden'), minimumLoadTime);
     
     // Remove o loader do fluxo do documento após a animação detransição:
-    loader.addEventListener('transitionend', function() {
+    loader.addEventListener('transitionend', () => {
         loader.style.display = 'none';
     });
 
