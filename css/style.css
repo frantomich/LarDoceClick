@@ -82,7 +82,6 @@
 /* --- Cartão de Benefício --- */
 .cartao-beneficio {
     width: 100%;     
-    /* max-width: 320px; */
     height: 360px;
     align-items: center;
     justify-content: flex-start; 
@@ -155,8 +154,7 @@
 
 /* --- Cartão de Imóvel --- */
 .cartao-imovel {
-    width: 100%;       
-    /* max-width: 395px;    */
+    width: 100%;
     height: 450px; 
     border: none;
     box-sizing: content-box;
