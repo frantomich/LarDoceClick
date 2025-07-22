@@ -7,34 +7,38 @@ O projeto consiste em um protótipo de website para uma imobiliária fictícia, 
 
 ## 📋 Índice
 
-- [Visão Geral do Desafio](#user-content-visão-geral-do-desafio)
-  - [Contexto do Desafio](#user-content-contexto-do-desafio)
-  - [Objetivos Cumpridos](#user-content-objetivos-cumpridos)
-- [Demonstração Interativa](#user-content-demonstracao-interativa)
-- [Funcionalidades Implementadas](#user-content-funcionalidades-implementadas)
-- [Tecnologias e Ferramentas](#user-content-tecnologias-e-ferramentas)
-  - [Decisões de Arquitetura](#user-content-decisoes-de-arquitetura)
-- [Instalação e Execução](#user-content-instalacao-e-execucao)
-  - [Pré-requisitos](#user-content-pre-requisitos)
-  - [Passo a Passo](#user-content-passo-a-passo)
-- [Configuração Adicional](#user-content-configuracao-adicional)
-- [Roteiro de Melhorias (Roadmap)](#user-content-roteiro-de-melhorias-roadmap)
-- [Como Contribuir](#user-content-como-contribuir)
-- [Agradecimentos](#user-content-agradecimentos)
-- [Equipe de Desenvolvimento](#user-content-equipe-de-desenvolvimento)
-- [Licença](#user-content-licenca)
+- [Visão Geral do Desafio](#visao-geral-do-desafio)
+  - [Contexto do Desafio](#contexto-do-desafio)
+  - [Objetivos Cumpridos](#objetivos-cumpridos)
+- [Demonstração Interativa](#demonstracao-interativa)
+- [Funcionalidades Implementadas](#funcionalidades-implementadas)
+- [Estrutura de Arquivos](#estrutura-de-arquivos)
+- [Tecnologias e Ferramentas](#tecnologias-e-ferramentas)
+  - [Decisões de Arquitetura](#decisoes-de-arquitetura)
+- [Instalação e Execução](#instalacao-e-execucao)
+  - [Pré-requisitos](#pre-requisitos)
+  - [Passo a Passo](#passo-a-passo)
+- [Configuração Adicional](#configuracao-adicional)
+- [Roteiro de Melhorias (Roadmap)](#roteiro-de-melhorias-roadmap)
+- [Como Contribuir](#como-contribuir)
+- [Agradecimentos](#agradecimentos)
+- [Equipe de Desenvolvimento](#equipe-de-desenvolvimento)
+- [Licença](#licenca)
 
 ---
-<a id=user-content-visão-geral-do-desafio><a>
+
+<a id="visao-geral-do-desafio"><a>
 ## 📌 Visão Geral do Desafio
 
 O *Lar Doce Click* é a nossa solução para o desafio de desenvolvimento frontend proposto pela *Visão Jr*, a Empresa Júnior dos cursos de Sistemas de Informação e Engenharia da Computação da *UFOP - Campus ICEA*.
 
+<a id="contexto-do-desafio"><a>
 ### 📝 Contexto do Desafio
 
 O desafio consistia em simular um cenário de cliente real, onde a demanda era criar uma landing page para uma imobiliária fictícia.  
 O projeto deveria ser visualmente atraente, totalmente responsivo e interativo, demonstrando habilidades técnicas em desenvolvimento web frontend.
 
+<a id="objetivos-cumpridos"><a>
 ### 🎯 Objetivos Cumpridos
 
 - *Estrutura Semântica e Acessível*: Uso de HTML5 semântico para acessibilidade e SEO.
@@ -45,6 +49,7 @@ O projeto deveria ser visualmente atraente, totalmente responsivo e interativo, 
 
 ---
 
+<a id="demonstracao-interativa"><a>
 ## 🚀 Demonstração Interativa
 
 Acesse o projeto completo em:  
@@ -52,6 +57,7 @@ Acesse o projeto completo em:
 
 ---
 
+<a id="funcionalidades-implementadas"><a>
 ## ✨ Funcionalidades Implementadas
 
 - 🎠 *Carrosséis Dinâmicos* (Benefícios, Imóveis, Depoimentos).
@@ -61,6 +67,7 @@ Acesse o projeto completo em:
 
 ---
 
+<a id="estrutura-de-arquivos"><a>
 ## 📁 Estrutura de Arquivos
 
 ```bash
@@ -79,7 +86,7 @@ lar-doce-click/
 
 ---
 
-
+<a id="tecnologias-e-ferramentas"><a>
 ## 🛠 Tecnologias e Ferramentas
 
 | Tecnologia           | Descrição                                                                |
@@ -93,6 +100,7 @@ lar-doce-click/
 
 ---
 
+<a id="decisoes-de-arquitetura"><a>
 ## ⚖ Decisões de Arquitetura
 
 - *Vanilla JS*: Evitamos frameworks para focar no domínio dos fundamentos.
@@ -100,14 +108,17 @@ lar-doce-click/
 
 ---
 
+<a id="instalacao-e-execucao"><a>
 ## ⚙ Instalação e Execução
 
+<a id="pre-requisitos"><a>
 ### ✅ Pré-requisitos
 
 - Git instalado.
 - Navegador moderno (Chrome, Firefox, etc.).
 - VSCode com a extensão Live Server.
 
+<a id="passo-a-passo"><a>
 ### 🚀 Passo a Passo
 
 ```bash
@@ -125,7 +136,7 @@ code .
 
 ---
 
-
+<a id="configuracao-adicional"><a>
 ## 🔧 Configuração Adicional (EmailJS)
 
 1. Crie uma conta no [EmailJS](https://www.emailjs.com/).
@@ -134,6 +145,7 @@ code .
 
 ---
 
+<a id="roteiro-de-melhorias-roadmap"><a>
 ## 🗺 Roteiro de Melhorias (Roadmap)
 
 - [ ] Página de detalhes para cada imóvel.
@@ -144,6 +156,7 @@ code .
 
 ---
 
+<a id="como-contribuir"><a>
 ## 🤝 Como Contribuir
 
 1. Faça um *fork*.
@@ -154,6 +167,7 @@ code .
    
 ---
 
+<a id="agradecimentos"><a>
 ## 🙏 Agradecimentos
 
 - À *Visão Jr.* pela oportunidade e desafio estimulante.  
@@ -162,6 +176,7 @@ code .
 
 ---
 
+<a id="equipe-de-desenvolvimento"><a>
 ## 👨‍💻 Equipe de Desenvolvimento
 
 | Integrante | GitHub | LinkedIn |
@@ -175,7 +190,7 @@ code .
 
 ---
 
-
+<a id="licenca"><a>
 ## 📄 Licença
 
 Este projeto está sob a licença MIT. Consulte o arquivo [LICENSE](./LICENSE) para mais detalhes.
