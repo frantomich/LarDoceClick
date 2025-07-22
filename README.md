@@ -132,12 +132,6 @@ code .
 2. Configure um serviço de e-mail (ex: Gmail) e um template.
 3. Substitua no arquivo js/script.js:
 
-js
-// Substitua pelas suas chaves do EmailJS
-const publicKey = "SUA_PUBLIC_KEY";
-const serviceID = "SEU_SERVICE_ID";
-const templateID = "SEU_TEMPLATE_ID";
-
 ---
 
 ## 🗺 Roteiro de Melhorias (Roadmap)
@@ -157,7 +151,7 @@ const templateID = "SEU_TEMPLATE_ID";
 3. Commit: git commit -m 'Minha contribuição'.
 4. Push: git push origin feature/sua-feature.
 5. Abra um *Pull Request*.
-
+   
 ---
 
 ## 🙏 Agradecimentos
