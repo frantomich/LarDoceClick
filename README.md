@@ -7,22 +7,22 @@ O projeto consiste em um protótipo de website para uma imobiliária fictícia, 
 
 ## 📋 Índice
 
-- [Visão Geral do Desafio](#visao-geral-do-desafio)
-  - [Contexto do Desafio](#contexto-do-desafio)
-  - [Objetivos Cumpridos](#objetivos-cumpridos)
-- [Demonstração Interativa](#demonstracao-interativa)
-- [Funcionalidades Implementadas](#funcionalidades-implementadas)
-- [Tecnologias e Ferramentas](#tecnologias-e-ferramentas)
-  - [Decisões de Arquitetura](#decisoes-de-arquitetura)
-- [Instalação e Execução](#instalacao-e-execucao)
-  - [Pré-requisitos](#pre-requisitos)
-  - [Passo a Passo](#passo-a-passo)
-- [Configuração Adicional](#configuracao-adicional)
-- [Roteiro de Melhorias (Roadmap)](#roteiro-de-melhorias-roadmap)
-- [Como Contribuir](#como-contribuir)
-- [Agradecimentos](#agradecimentos)
-- [Equipe de Desenvolvimento](#equipe-de-desenvolvimento)
-- [Licença](#licenca)
+- [Visão Geral do Desafio](#user-content-visão-geral-do-desafio)
+  - [Contexto do Desafio](#user-content-contexto-do-desafio)
+  - [Objetivos Cumpridos](#user-content-objetivos-cumpridos)
+- [Demonstração Interativa](#user-content-demonstracao-interativa)
+- [Funcionalidades Implementadas](#user-content-funcionalidades-implementadas)
+- [Tecnologias e Ferramentas](#user-content-tecnologias-e-ferramentas)
+  - [Decisões de Arquitetura](#user-content-decisoes-de-arquitetura)
+- [Instalação e Execução](#user-content-instalacao-e-execucao)
+  - [Pré-requisitos](#user-content-pre-requisitos)
+  - [Passo a Passo](#user-content-passo-a-passo)
+- [Configuração Adicional](#user-content-configuracao-adicional)
+- [Roteiro de Melhorias (Roadmap)](#user-content-roteiro-de-melhorias-roadmap)
+- [Como Contribuir](#user-content-como-contribuir)
+- [Agradecimentos](#user-content-agradecimentos)
+- [Equipe de Desenvolvimento](#user-content-equipe-de-desenvolvimento)
+- [Licença](#user-content-licenca)
 
 ---
 
