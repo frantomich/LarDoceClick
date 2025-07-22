@@ -102,7 +102,6 @@ code .
 
 # 4. Execute com Live Server no arquivo `index.html`
 
-
 ---
 
 ## 🔧 Configuração Adicional (EmailJS)
@@ -116,7 +115,6 @@ js
 const publicKey = "SUA_PUBLIC_KEY";
 const serviceID = "SEU_SERVICE_ID";
 const templateID = "SEU_TEMPLATE_ID";
-
 
 ---
 
