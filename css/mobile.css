@@ -304,7 +304,8 @@
 
   /* Cartões de imóvel com altura fixa */
   .cartao-imovel {
-    width: 80%;
+    width: 100%;
+    max-width: 320px;
     height: flex;
     border: none;
     box-sizing: content-box;
@@ -315,9 +316,9 @@
 
   /* Cartões de benefício com tamanho fixo */
 .cartao-beneficio {
-  width: 90%;
+  width: 100%;
   max-width: 320px;
-  height: 370px;
+  height: flex;
   padding: 20px; /* Adiciona espaço interno */
   border: none;
   box-sizing: border-box;
