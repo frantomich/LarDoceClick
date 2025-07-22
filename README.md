@@ -181,7 +181,7 @@ code .
 
 | Integrante | GitHub | LinkedIn |
 |-----------|--------|----------|
-| ![](https://via.placeholder.com/100) <br> *Fábio Júnior* | [GitHub](https://github.com/[GITHUB_USER_1]) | [LinkedIn](https://www.linkedin.com/in/[LINKEDIN_USER_1]/) |
+| ![](https://via.placeholder.com/100) <br> *Fábio Ramos Zeferino Júnior* | [GitHub](https://github.com/fabiojr01) | [LinkedIn](https://www.linkedin.com/in/f%C3%A1bio-ramos-zeferino-j%C3%BAnior-a13589376/) |
 | ![](https://via.placeholder.com/100) <br> *Franklin Liesner Tomich* | [GitHub](https://github.com/frantomich) | [LinkedIn](https://www.linkedin.com/in/franklin-l-tomich-b6256936a/) |
 | ![](https://via.placeholder.com/100) <br> *Kauã*   | [GitHub](https://github.com/kauakirk) | [LinkedIn](https://www.linkedin.com/in/kaua-k-992400209/) |
 | ![](https://via.placeholder.com/100) <br> *Kelvin* | [GitHub](https://github.com/[GITHUB_USER_3]) | [LinkedIn](https://www.linkedin.com/in/[LINKEDIN_USER_3]/) |
