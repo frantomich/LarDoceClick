@@ -2,6 +2,50 @@
  * Contém os estilos de layout para cada seção da página e as media queries.
  */
 
+/* -------------------------------- Loader --------------------------------- */
+
+/* Previne que a página seja rolada enquanto o loader estiver ativo: */
+body.loading {
+    overflow: hidden;
+}
+
+/* Estilo do container do loader: */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--cor-fundo);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.7s, visibility 0.7s; /*Efeito de fade-out */
+}
+
+/* Esconde o loader via (ativado via JS): */
+#loader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Estilo do spinner: */
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid var(--cor-fundo-cards);
+    border-top: 5px solid var(--cor-primaria-clara);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Animação de rotação: */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
 /* ----------------------- Seção do Hero ------------------------ */
 
 .secao-hero {
