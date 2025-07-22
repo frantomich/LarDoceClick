@@ -32,7 +32,7 @@ O *Lar Doce Click* é a nossa solução para o desafio de desenvolvimento fronte
 
 ### 📝 Contexto do Desafio
 
-O desafio consistia em simular um cenário de cliente real, onde a demanda era criar um protótipo de website one-page para uma imobiliária fictícia.  
+O desafio consistia em simular um cenário de cliente real, onde a demanda era criar uma landing page para uma imobiliária fictícia.  
 O projeto deveria ser visualmente atraente, totalmente responsivo e interativo, demonstrando habilidades técnicas em desenvolvimento web frontend.
 
 ### 🎯 Objetivos Cumpridos
@@ -89,7 +89,7 @@ Acesse o projeto completo em:
 - Navegador moderno (Chrome, Firefox, etc.)
 - VSCode com a extensão Live Server
 
-### 🚀 Passo a Passo
+## 🚀 Passo a Passo
 
 # 1. Clone o repositório
 git clone https://github.com/frantomich/LarDoceClick.git
