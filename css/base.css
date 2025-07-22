@@ -40,7 +40,6 @@
 /* === CLASSES DE UTILIDADE === */
 .container {
   width: 100%;
-  max-width: 1366px;
   padding-top: 2rem;
   padding-bottom: 2rem;
   padding-left: 0rem;

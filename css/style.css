@@ -2,9 +2,7 @@
  * Contém os estilos de layout para cada seção da página e as media queries.
  */
 
-
 /* ----------------------- Seção do Hero ------------------------ */
-
 
 .secao-hero {
     display: flex;
@@ -295,7 +293,7 @@
 }
 
 .secao-sobre-lista li::marker {
-    color: #434A97;
+    color: var(--cor-primaria-clara);
 }
 
 .secao-sobre-imagem-container {
