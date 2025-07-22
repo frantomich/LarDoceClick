@@ -145,7 +145,7 @@
 @media (max-width: 768px) {
   .container { padding: 40px 15px; }
   .secao-hero { min-height: auto; padding: 60px 20px; }
-  .secao-hero__barra-topo { padding: 20px 20px; justify-content: center;} 
+  .secao-hero__barra-topo {justify-content: center; align-content: center;} 
   .cartao-beneficio, .cartao-imovel { min-width: 300px; }
 }
 
@@ -155,6 +155,7 @@
 @media (max-width: 480px) {
   .secao-hero__barra-topo {
     justify-content: center;
+    align-content: center;
     padding: 15px 15px;
   }
   .secao-hero__titulo {
@@ -163,15 +164,6 @@
   .secao-hero__subtitulo {
     font-size: clamp(14px, 3.5vw, 18px); 
   }
-}
-
-/* Telas médias (481px a 768px) */
-@media (min-width: 481px) and (max-width: 768px) {
-
-}
-
-/* Telas grandes (769px a 1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {
 }
 
 /* Telas extra grandes (acima de 1200px) */
@@ -186,10 +178,16 @@
 
 /* Ajustes para zoom alto (quando o viewport fica muito pequeno) */
 @media (max-width: 320px) {
+  .secao-hero__barra-topo {
+    justify-content: center;
+    align-content: center;
+  }  
   .secao-hero__logo {
     width: 20%;
     min-width: 150px;
     height: auto;
+    justify-self: center;
+    align-self: center;
   }
   .secao-hero__titulo {
     font-size: clamp(20px, 7vw, 28px);
@@ -208,11 +206,19 @@
 
 /* Responsivo */
 @media (max-width: 768px) {
-    .secao-hero__logo {
-        width: 20%;
-        min-width: 200px;
-        height: auto;
+  .secao-hero__barra-topo {
+    justify-content: center;
+    align-content: center;
   }
+
+  .secao-hero__logo {
+    width: 20%;
+    min-width: 200px;
+    height: auto;
+    align-self: center;
+    justify-self: center;
+  }
+
   .secao-sobre {
     flex-direction: column;
     text-align: center;
@@ -227,6 +233,12 @@
 
 /* Responsivo */
 @media (max-width: 768px) {
+
+  .secao-hero__barra-topo {
+    justify-content: center;
+    align-content: center;
+  }
+
   .secao-sobre {
     flex-direction: column;
     padding: 40px 5%;
@@ -316,7 +328,6 @@
 
 }
 
-
   /* Paginação com menor margem */
   .paginacao {
     display: flex;
@@ -328,6 +339,11 @@
 
 /* Mobile (até 768px) */
 @media (max-width: 768px) {
+  .secao-hero__barra-topo {
+    justify-content: center;
+    align-content: center;
+  }
+
   .container {
     padding: 20px 15px;
   }
@@ -341,6 +357,12 @@
 
 /* Telas muito pequenas (até 480px) */
 @media (max-width: 480px) {
+
+  .secao-hero__barra-topo {
+    justify-content: center;
+    align-content: center;
+  } 
+
   .container {
     padding: 15px 10px;
   }
