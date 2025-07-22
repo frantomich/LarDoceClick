@@ -293,7 +293,7 @@
   /* Cartões de imóvel com altura fixa */
   .cartao-imovel {
     width: 80%;
-    height: 400px;
+    height: flex;
     border: none;
     box-sizing: content-box;
     border-radius: 12px;
@@ -305,7 +305,7 @@
 .cartao-beneficio {
   width: 90%;
   max-width: 320px;
-  height: 300px;
+  height: 350px;
   padding: 20px; /* Adiciona espaço interno */
   border: none;
   box-sizing: border-box;
