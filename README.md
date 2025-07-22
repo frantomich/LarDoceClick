@@ -61,6 +61,23 @@ Acesse o projeto completo em:
 
 ---
 
+## 📁 Estrutura de Arquivos
+
+bash
+lar-doce-click/
+├── assets/
+│   ├── images/         # Imagens dos imóveis, banners, etc.
+│   └── icons/          # Ícones (SVG ou PNG)
+├── css/
+│   └── style.css       # Folha de estilos principal
+├── js/
+│   └── script.js       # Lógica de interatividade e EmailJS
+├── index.html          # Arquivo principal da aplicação
+├── LICENSE             # Arquivo da licença do projeto
+└── README.md           # Documentação do projeto
+
+---
+
 ## 🛠 Tecnologias e Ferramentas
 
 | Tecnologia           | Descrição                                                                |
