@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const width = window.innerWidth;
                 if (width <= 800) { // <-- ATUALIZADO para corresponder ao CSS
                     itemsPerView = 1;
-                } else if (width <= 1080) { // <-- ATUALIZADO para corresponder ao CSS
+                } else if (width <= 1080) {
                     itemsPerView = 2;
                 } else {
                     itemsPerView = 3;

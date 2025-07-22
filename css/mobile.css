@@ -261,7 +261,7 @@
 
 
 /* Para telas com 1081px ou mais (mostra 3 cards) */
-@media (min-width: 1081px) {
+@media (min-width: 1080px) {
     .secao-imoveis .carousel-item,
     .secao-beneficios .carousel-item {
         
@@ -270,7 +270,7 @@
 }
 
 /* Para telas entre 769px e 1080.98px (mostra 2 cards) */
-@media (min-width: 769px) and (max-width: 1080.98px) {
+@media (min-width: 800px) and (max-width: 1080px) {
     .secao-imoveis .carousel-item,
     .secao-beneficios .carousel-item {
         
@@ -279,7 +279,7 @@
 }
 
 /* Para telas com menos de 769px (mostra 1 card) */
-@media (max-width: 768.98px) {
+@media (max-width: 800px) {
     .secao-imoveis .carousel-item,
     .secao-beneficios .carousel-item {
         flex: 0 0 100%;
