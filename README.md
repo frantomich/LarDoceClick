@@ -130,11 +130,11 @@ const templateID = "SEU_TEMPLATE_ID";
 
 ## 🤝 Como Contribuir
 
-1. Faça um *fork*
-2. Crie uma branch: git checkout -b feature/sua-feature
-3. Commit: git commit -m 'Minha contribuição'
-4. Push: git push origin feature/sua-feature
-5. Abra um *Pull Request*
+1. Faça um *fork*.
+2. Crie uma branch: git checkout -b feature/sua-feature.
+3. Commit: git commit -m 'Minha contribuição'.
+4. Push: git push origin feature/sua-feature.
+5. Abra um *Pull Request*.
 
 ---
 
