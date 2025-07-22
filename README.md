@@ -167,7 +167,7 @@ code .
 | Integrante | GitHub | LinkedIn |
 |-----------|--------|----------|
 | ![](https://via.placeholder.com/100) <br> *[Nome do Estudante 1]* | [GitHub](https://github.com/[GITHUB_USER_1]) | [LinkedIn](https://www.linkedin.com/in/[LINKEDIN_USER_1]/) |
-| ![](https://via.placeholder.com/100) <br> *[Nome do Estudante 2]* | [GitHub](https://github.com/[GITHUB_USER_2]) | [LinkedIn](https://www.linkedin.com/in/[LINKEDIN_USER_2]/) |
+| ![](https://via.placeholder.com/100) <br> *[Franklin Liesner Tomich]* | [GitHub](https://github.com/frantomich) | [LinkedIn](https://www.linkedin.com/in/franklin-l-tomich-b6256936a/) |
 | ![](https://via.placeholder.com/100) <br> *[Nome do Estudante 3]* | [GitHub](https://github.com/[GITHUB_USER_3]) | [LinkedIn](https://www.linkedin.com/in/[LINKEDIN_USER_3]/) |
 | ![](https://via.placeholder.com/100) <br> *[Nome do Estudante 4]* | [GitHub](https://github.com/[GITHUB_USER_4]) | [LinkedIn](https://www.linkedin.com/in/[LINKEDIN_USER_4]/) |
 | ![](https://via.placeholder.com/100) <br> *[Vitória de Souza Miranda]* | [GitHub](https://github.com/vitoriasmiranda) | [LinkedIn](https://www.linkedin.com/in/vitoriasmiranda/) |
