@@ -62,7 +62,8 @@ document.addEventListener('DOMContentLoaded', () => {
         function updateIndicators() {
             if (!indicatorsContainer) return;
             const indicators = indicatorsContainer.querySelectorAll('.carousel-indicator');
-            const currentPage = Math.floor(currentIndex / itemsPerView);
+            const currentPage = Math.ceil(currentIndex / itemsPerView);
+            console.log(currentIndex, itemsPerView, currentPage);
             indicators.forEach((indicator, idx) => {
                 indicator.classList.toggle('carousel-indicator-active', idx === currentPage);
             });
@@ -93,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             nextBtn.addEventListener('click', () => {
-                if (currentIndex == itemsPerView * Math.ceil(totalItems / itemsPerView) - itemsPerView) {
+                if (currentIndex == totalItems - itemsPerView) {
                     moveToIndex(0);
                 } else moveToIndex(currentIndex + itemsPerView);
             });
