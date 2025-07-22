@@ -12,7 +12,6 @@ O projeto consiste em um protótipo de website para uma imobiliária fictícia, 
   - [Objetivos Cumpridos](#objetivos-cumpridos)
 - [Demonstração Interativa](#demonstração-interativa)
 - [Funcionalidades Implementadas](#funcionalidades-implementadas)
-- [Estrutura de Arquivos](#estrutura-de-arquivos)
 - [Tecnologias e Ferramentas](#tecnologias-e-ferramentas)
   - [Decisões de Arquitetura](#decisões-de-arquitetura)
 - [Instalação e Execução](#instalação-e-execução)
@@ -62,24 +61,6 @@ Acesse o projeto completo em:
 
 ---
 
-## 📁 Estrutura de Arquivos
-
-bash
-lar-doce-click/
-├── assets/
-│   ├── images/         # Imagens dos imóveis, banners, etc.
-│   └── icons/          # Ícones (SVG ou PNG)
-├── css/
-│   └── style.css       # Folha de estilos principal
-├── js/
-│   └── script.js       # Lógica de interatividade e EmailJS
-├── index.html          # Arquivo principal da aplicação
-├── LICENSE             # Arquivo da licença do projeto
-└── README.md           # Documentação do projeto
-
-
----
-
 ## 🛠 Tecnologias e Ferramentas
 
 | Tecnologia           | Descrição                                                                |
@@ -110,7 +91,6 @@ lar-doce-click/
 
 ### 🚀 Passo a Passo
 
-bash
 # 1. Clone o repositório
 git clone https://github.com/frantomich/LarDoceClick.git
 
