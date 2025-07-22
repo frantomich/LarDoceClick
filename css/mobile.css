@@ -1,6 +1,6 @@
 /*Folha de estilos para dispositivos móveis*/
 
-@media (max-width: 768px) {
+@media (max-width: 700px) {
     
     /* Esconde as setas de navegação que não são necessárias no mobile */
     .carousel-prev, 
