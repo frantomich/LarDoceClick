@@ -7,22 +7,22 @@ O projeto consiste em um protótipo de website para uma imobiliária fictícia, 
 
 ## 📋 Índice
 
-- [Visão Geral do Desafio](#visão-geral-do-desafio)
-  - [Contexto do Desafio](#contexto-do-desafio)
-  - [Objetivos Cumpridos](#objetivos-cumpridos)
-- [Demonstração Interativa](#demonstração-interativa)
+- [Visão Geral do Desafio](#visao-geral-do-desafio)
+  - [Contexto do Desafio](#contexto-do-desafio)
+  - [Objetivos Cumpridos](#objetivos-cumpridos)
+- [Demonstração Interativa](#demonstracao-interativa)
 - [Funcionalidades Implementadas](#funcionalidades-implementadas)
 - [Tecnologias e Ferramentas](#tecnologias-e-ferramentas)
-  - [Decisões de Arquitetura](#decisões-de-arquitetura)
-- [Instalação e Execução](#instalação-e-execução)
-  - [Pré-requisitos](#pré-requisitos)
-  - [Passo a Passo](#passo-a-passo)
-- [Configuração Adicional](#configuração-adicional)
+  - [Decisões de Arquitetura](#decisoes-de-arquitetura)
+- [Instalação e Execução](#instalacao-e-execucao)
+  - [Pré-requisitos](#pre-requisitos)
+  - [Passo a Passo](#passo-a-passo)
+- [Configuração Adicional](#configuracao-adicional)
 - [Roteiro de Melhorias (Roadmap)](#roteiro-de-melhorias-roadmap)
 - [Como Contribuir](#como-contribuir)
 - [Agradecimentos](#agradecimentos)
 - [Equipe de Desenvolvimento](#equipe-de-desenvolvimento)
-- [Licença](#licença)
+- [Licença](#licenca)
 
 ---
 
