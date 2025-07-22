@@ -85,9 +85,9 @@ Acesse o projeto completo em:
 
 ### ✅ Pré-requisitos
 
-- Git instalado
-- Navegador moderno (Chrome, Firefox, etc.)
-- VSCode com a extensão Live Server
+- Git instalado.
+- Navegador moderno (Chrome, Firefox, etc.).
+- VSCode com a extensão Live Server.
 
 ## 🚀 Passo a Passo
 
