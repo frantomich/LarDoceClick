@@ -172,7 +172,7 @@ const templateID = "SEU_TEMPLATE_ID";
 
 | Integrante | GitHub | LinkedIn |
 |-----------|--------|----------|
-| ![](https://via.placeholder.com/100) <br> *[Vitória de Souza Miranda]* | [GitHub](https://github.com/vitoriasmiranda) | [LinkedIn](https://www.linkedin.com/in/vitoriasmiranda/) |
+| ![](https://via.placeholder.com/100) <br> *Vitória de Souza Miranda* | [GitHub](https://github.com/vitoriasmiranda) | [LinkedIn](https://www.linkedin.com/in/vitoriasmiranda/) |
 | ![](https://via.placeholder.com/100) <br> *[Nome do Estudante 2]* | [GitHub](https://github.com/[GITHUB_USER_2]) | [LinkedIn](https://www.linkedin.com/in/[LINKEDIN_USER_2]/) |
 | ![](https://via.placeholder.com/100) <br> *[Nome do Estudante 3]* | [GitHub](https://github.com/[GITHUB_USER_3]) | [LinkedIn](https://www.linkedin.com/in/[LINKEDIN_USER_3]/) |
 | ![](https://via.placeholder.com/100) <br> *[Nome do Estudante 4]* | [GitHub](https://github.com/[GITHUB_USER_4]) | [LinkedIn](https://www.linkedin.com/in/[LINKEDIN_USER_4]/) |
