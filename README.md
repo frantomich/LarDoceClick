@@ -91,7 +91,7 @@ Acesse o projeto completo em:
 
 ## 🚀 Passo a Passo
 
-- 1. Clone o repositório
+- 1 Clone o repositório
 git clone https://github.com/frantomich/LarDoceClick.git
 
 # 2. Acesse o diretório
