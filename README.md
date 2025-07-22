@@ -48,7 +48,7 @@ O projeto deveria ser visualmente atraente, totalmente responsivo e interativo, 
 ## 🚀 Demonstração Interativa
 
 Acesse o projeto completo em:  
-👉 [Clique aqui para visitar o Lar Doce Click](https://[URL_DO_PROJETO])
+👉 [Clique aqui para visitar o Lar Doce Click](https://frantomich.github.io/)
 
 ---
 
