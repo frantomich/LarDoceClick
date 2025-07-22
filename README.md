@@ -108,20 +108,23 @@ lar-doce-click/
 - Navegador moderno (Chrome, Firefox, etc.).
 - VSCode com a extensão Live Server.
 
-## 🚀 Passo a Passo
+### 🚀 Passo a Passo
 
-- Clone o repositório
-git clone https://github.com/frantomich/LarDoceClick.git
+bash
+# 1. Clone o repositório
+git clone https://github.com/[USUARIO_OU_ORGANIZACAO]/[NOME_DO_REPOSITORIO].git
 
 # 2. Acesse o diretório
-cd LarDoceClick
+cd [NOME_DO_REPOSITORIO]
 
 # 3. Abra no VSCode
 code .
 
 # 4. Execute com Live Server no arquivo `index.html`
 
+
 ---
+
 
 ## 🔧 Configuração Adicional (EmailJS)
 
