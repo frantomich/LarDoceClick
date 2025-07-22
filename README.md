@@ -1,6 +1,6 @@
 # 🏡 Lar Doce Click
 
-Solução desenvolvida por estudantes da *Universidade Federal de Ouro Preto (UFOP) - Campus ICEA* para o *Desafio Frontend* proposto pela *Visão Jr.*.  
+Solução desenvolvida por estudantes da *Universidade Federal de Ouro Preto (UFOP) - Campus ICEA* para o *Desafio Frontend* proposto pela *Visão Jr*.  
 O projeto consiste em um protótipo de website para uma imobiliária fictícia, com foco em design moderno, responsividade e interatividade.
 
 ---
