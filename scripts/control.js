@@ -57,9 +57,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 itemsPerView = fixedItemsPerView;
             } else {
                 const width = window.innerWidth;
-                if (width < 769) { // <-- ATUALIZADO para corresponder ao CSS
+                if (width <= 900) { // <-- ATUALIZADO para corresponder ao CSS
                     itemsPerView = 1;
-                } else if (width < 1081) { // <-- ATUALIZADO para corresponder ao CSS
+                } else if (width <= 1080) { // <-- ATUALIZADO para corresponder ao CSS
                     itemsPerView = 2;
                 } else {
                     itemsPerView = 3;
