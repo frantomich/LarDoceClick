@@ -273,15 +273,17 @@
         flex: 0 0 100%;
     }
 }
-/* Padrão geral para .container (desktop e maiores) */
-.container {
-  padding: 60px 80px;
-}
 
 /* Tablet (até 992px) */
 @media (max-width: 992px) {
   .container {
     padding: 40px 40px;
+  }
+
+  h1, h2, h3, h4, h5, h6, .titulo-secao, .secao-hero__titulo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 0.75rem;
   }
 }
 
@@ -290,6 +292,10 @@
   .container {
     padding: 30px 20px;
   }
+
+  h1, h2, h3, h4, h5, h6, .titulo-secao, .secao-hero__titulo {
+    font-size: 1.7rem; /* Um pouco menor que tablet, se quiser */
+  }
 }
 
 /* Telas muito pequenas (até 480px) */
@@ -297,9 +303,9 @@
   .container {
     padding: 20px 15px;
   }
+
+  h1, h2, h3, h4, h5, h6, .titulo-secao, .secao-hero__titulo {
+    font-size: 1.6rem; /* Um pouco menor ainda */
+  }
 }
-h1, h2, h3, h4, h5, h6, .titulo-secao, .secao-hero__titulo {
-  font-size: 1.8rem;
-  font-weight: bold;
-  margin-bottom: 0.75rem;
-}
+
