@@ -317,14 +317,13 @@
 .cartao-beneficio {
   width: 90%;
   max-width: 320px;
-  height: 350px;
+  height: 370px;
   padding: 20px; /* Adiciona espaço interno */
   border: none;
   box-sizing: border-box;
   border-radius: 10px;
   box-shadow: var(--sombra-cartao);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow-y: auto;
 
 }
 
