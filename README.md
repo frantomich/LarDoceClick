@@ -28,7 +28,7 @@ O projeto consiste em um protótipo de website para uma imobiliária fictícia, 
 
 ## 📌 Visão Geral do Desafio
 
-O *Lar Doce Click* é a nossa solução para o desafio de desenvolvimento frontend proposto pela *Visão Jr., a Empresa Júnior dos cursos de, Sistemas de Informação e Engenharia da Computação da **UFOP - Campus ICEA*.
+O *Lar Doce Click* é a nossa solução para o desafio de desenvolvimento frontend proposto pela *Visão Jr*, a Empresa Júnior dos cursos de Sistemas de Informação e Engenharia da Computação da *UFOP - Campus ICEA*.
 
 ### 📝 Contexto do Desafio
 
