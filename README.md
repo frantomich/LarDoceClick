@@ -128,7 +128,7 @@ code .
 
 ## 🔧 Configuração Adicional (EmailJS)
 
-1. Crie uma conta no [EmailJS](https://www.emailjs.com/)
+1. Crie uma conta no [EmailJS](https://www.emailjs.com/).
 2. Configure um serviço de e-mail (ex: Gmail) e um template.
 3. Substitua no arquivo js/script.js:
 
