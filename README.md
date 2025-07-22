@@ -55,10 +55,10 @@ Acesse o projeto completo em:
 
 ## ✨ Funcionalidades Implementadas
 
-- 🎠 *Carrosséis Dinâmicos* (Benefícios, Imóveis, Depoimentos)
-- 🖼 *Vitrine de Imóveis* com dados como quartos, banheiros, vagas
-- 📧 *Formulário de Contato Funcional* com integração ao EmailJS
-- 📱 *Design 100% Responsivo* em desktop, tablet e mobile
+- 🎠 *Carrosséis Dinâmicos* (Benefícios, Imóveis, Depoimentos).
+- 🖼 *Vitrine de Imóveis* com dados como quartos, banheiros, vagas.
+- 📧 *Formulário de Contato Funcional* com integração ao EmailJS.
+- 📱 *Design 100% Responsivo* em desktop, tablet e mobile.
 
 ---
 
@@ -128,7 +128,7 @@ code .
 ## 🔧 Configuração Adicional (EmailJS)
 
 1. Crie uma conta no [EmailJS](https://www.emailjs.com/)
-2. Configure um serviço de e-mail (ex: Gmail) e um template
+2. Configure um serviço de e-mail (ex: Gmail) e um template.
 3. Substitua no arquivo js/script.js:
 
 js
@@ -142,11 +142,11 @@ const templateID = "SEU_TEMPLATE_ID";
 
 ## 🗺 Roteiro de Melhorias (Roadmap)
 
-- [ ] Página de detalhes para cada imóvel
-- [ ] Filtros avançados (preço, quartos, cidade)
-- [ ] Animações e transições sutis
-- [ ] Otimização de performance (CSS/JS e imagens)
-- [ ] Testes unitários para funções JS
+- [ ] Página de detalhes para cada imóvel.
+- [ ] Filtros avançados (preço, quartos, cidade).
+- [ ] Animações e transições sutis.
+- [ ] Otimização de performance (CSS/JS e imagens).
+- [ ] Testes unitários para funções JS.
 
 ---
 
@@ -162,9 +162,9 @@ const templateID = "SEU_TEMPLATE_ID";
 
 ## 🙏 Agradecimentos
 
-- À *Visão Jr.* pela oportunidade e desafio estimulante  
-- Aos professores e colegas da *UFOP - ICEA* pelo apoio  
-- À comunidade open source por compartilhar tanto conhecimento
+- À *Visão Jr.* pela oportunidade e desafio estimulante.  
+- Aos professores e colegas da *UFOP - ICEA* pelo apoio. 
+- À comunidade open source por compartilhar tanto conhecimento.
 
 ---
 
