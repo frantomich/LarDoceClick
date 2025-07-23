@@ -55,7 +55,7 @@ O projeto deveria ser visualmente atraente, totalmente responsivo e interativo, 
 Acesse o projeto completo em:  
 👉 [Clique aqui para visitar o Lar Doce Click](https://frantomich.github.io/)
 
-Aqui você pode interagir com o protótipo do Figma: 
+Aqui você pode interagir com o protótipo do Figma:                                                                                                                 
 👉 [Clique aqui para acessar o protótipo](https://www.figma.com/design/AGFx5124XcDuOB5tL5fTaf/LandingPage?node-id=0-1&t=FGRFuYdN3Zf21yy9-1)
 
 ---
