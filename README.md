@@ -58,7 +58,6 @@ Acesse o projeto completo em:
 Aqui você pode interagir com o protótipo do Figma: 
 👉 [Clique aqui para acessar o protótipo](https://www.figma.com/design/AGFx5124XcDuOB5tL5fTaf/LandingPage?node-id=0-1&t=FGRFuYdN3Zf21yy9-1)
 
-
 ---
 
 <a id="funcionalidades-implementadas"><a>
